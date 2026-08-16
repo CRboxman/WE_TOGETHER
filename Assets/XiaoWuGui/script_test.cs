@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class script_test : MonoBehaviour
 {
+    //密码：Ysy8684@
     // Start is called before the first frame update
     public int tmp = 1;
     
