@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using QFramework;
 using TMPro;
+using TypingFXProFREE;
 using UnityEngine;
 using UnityEngine.UI;
 
