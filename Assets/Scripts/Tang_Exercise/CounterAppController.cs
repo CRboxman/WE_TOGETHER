@@ -14,30 +14,35 @@ public class CounterAppController : MonoBehaviour,IController
     private TMP_Text mCountText;
 
     // 4. Model
-    private CounterAppModel mModel;
+    private ICounterAppModel mModel;
 
     void Start()
     {
         // 5. 获取模型
-        mModel = this.GetModel<CounterAppModel>();
-        
+        mModel = this.GetModel<ICounterAppModel>();
+        var stotage = this.GetUtility<IStorage>();
+
         #region 表现逻辑相关对象获得
         // View 组件获取
         mBtnAdd = transform.Find("BtnAdd").GetComponent<Button>();
         mBtnSub = transform.Find("BtnSub").GetComponent<Button>();
         mCountText = transform.Find("CountText").GetComponent<TMP_Text>();
         #endregion
+        Debug.Log("当前初始保存的值："+mModel.Count);
+        Debug.Log(stotage.LoadInt("Count"));
 
 
         #region 将复用逻辑放入event容器中
-        this.RegisterEvent<CountAppChangeEvent>((e) =>
-        {
-            UpdateView();        
-        }).UnRegisterWhenGameObjectDestroyed(gameObject);
-        this.RegisterEvent<CountAppChangeWithNumEvent>((num) =>
-        {
-            print(num.Count+this.GetModel<CounterAppModel>().aCount.Value);
-        }).UnRegisterWhenGameObjectDestroyed(gameObject);
+        // this.RegisterEvent<CountAppChangeEvent>((e) =>
+        // {
+        //     UpdateView();        
+        // }).UnRegisterWhenGameObjectDestroyed(gameObject);
+        // this.RegisterEvent<CountAppChangeWithNumEvent>((num) =>
+        // {
+        //     print(num.Count+this.GetModel<CounterAppModel>().aCount.Value);
+        // }).UnRegisterWhenGameObjectDestroyed(gameObject);
+        mModel.Count.RegisterWithInitValue(count => UpdateView()).UnRegisterWhenGameObjectDestroyed(gameObject);
+        
         #endregion
         
         #region 实际逻辑（外部的数据处理逻辑“命令”来减轻负担+本身这里的表现逻辑，因为控制器这里定义并存储着各个对象
@@ -61,7 +66,7 @@ public class CounterAppController : MonoBehaviour,IController
     }
     private void UpdateView()
     {
-        mCountText.text = mModel.aCount.ToString();
+        mCountText.text = mModel.Count.ToString();
     }
     
     #region 指定架构（获得里面注册的模型，可以访问数据了
@@ -79,19 +84,27 @@ public class CounterAppController : MonoBehaviour,IController
 }
 
 #region 模型（存共享数据，这里本身需要初始化
-public class CounterAppModel : AbstractModel
+
+public interface ICounterAppModel : IModel
 {
-    public BindableProperty<int> aCount { get; }=new BindableProperty<int>();
-    
+    BindableProperty<int> Count { get; }
+}
+public class CounterAppModel : AbstractModel,ICounterAppModel
+{
+    public BindableProperty<int> Count { get; } = new BindableProperty<int>();
+
     protected override void OnInit()
     {
-         var storage=this.GetUtility<Storage>();
-         aCount.SetValueWithoutEvent(storage.LoadInt(nameof(aCount)));
+        var storage = this.GetUtility<IStorage>();
 
-         aCount.Register(a =>
-         {
-             storage.SaveInt(nameof(aCount), a);
-         });
+        // 设置初始值（不触发事件）
+        Count.SetValueWithoutEvent(storage.LoadInt(nameof(Count)));
+
+        // 当数据变更时 存储数据
+        Count.Register(newCount =>
+        {
+            storage.SaveInt(nameof(Count),newCount);
+        });
     }
 }
 #endregion
@@ -101,11 +114,11 @@ public class CounterAppArc : Architecture<CounterAppArc>
 {
     protected override void Init()
     {
-        this.RegisterModel(new CounterAppModel());
+        this.RegisterModel<ICounterAppModel>(new CounterAppModel());
         
-        this.RegisterUtility(new Storage());
+        this.RegisterUtility<IStorage>(new Storage());
         
-        this.RegisterSystem(new AchievementSystem());
+        this.RegisterSystem<IAchievementSystem>(new AchievementSystem());
     }
 }
 
@@ -113,12 +126,15 @@ public class CounterAppArc : Architecture<CounterAppArc>
 #endregion
 
 #region system
-
-public class AchievementSystem:AbstractSystem
+public interface IAchievementSystem:ISystem
+{
+    
+}
+public class AchievementSystem:AbstractSystem,IAchievementSystem
 {
     protected override void OnInit()
     {
-        var model=this.GetModel<CounterAppModel>();
+        var model=this.GetModel<ICounterAppModel>();
         // this.RegisterEvent<CountAppChangeEvent>(((e) =>
         // {
         //     if (model.aCount == 10)
@@ -133,7 +149,7 @@ public class AchievementSystem:AbstractSystem
         //         Debug.Log("触发 点击菜鸟 成就");
         //     }
         // }));
-        model.aCount.Register(count =>
+        model.Count.Register(count =>
         {
             if (count == 10)
             {
@@ -142,7 +158,7 @@ public class AchievementSystem:AbstractSystem
             else if (count == 20)
             {
                 Debug.Log("触发 点击专家 成就");
-            } else if (model.aCount.Value == -10)
+            } else if (model.Count.Value == -10)
             {
                 Debug.Log("触发 点击菜鸟 成就");
             }  
@@ -158,7 +174,7 @@ public class IncreaseCountCommand : AbstractCommand
     protected override void OnExecute()
     {
         #region 因为这里可以用GetModel，来快速访问所有模型，所以可以在这里随时处理模型数据
-        this.GetModel<CounterAppModel>().aCount.Value += 1;
+        this.GetModel<ICounterAppModel>().Count.Value += 1;
         #endregion
 
         #region 发送事件容器（一般装着复用重复逻辑，在这里接上上方的数据逻辑处理，具体实现还是在controller里，因为注册在那里
@@ -172,7 +188,7 @@ public class DecreaseCountCommand : AbstractCommand
 {
     protected override void OnExecute()
     {
-        this.GetModel<CounterAppModel>().aCount.Value -= 1;
+        this.GetModel<ICounterAppModel>().Count.Value -= 1;
         
         this.SendEvent<CountAppChangeEvent>();
     }
@@ -214,8 +230,12 @@ public struct CountAppChangeWithNumEvent
 #endregion
 
 #region Utility（提取公共方法，方便各处获得，当做第三方的那种不是静态的工具类
-
-public class Storage : IUtility
+public interface IStorage : IUtility
+{
+    void SaveInt(string key, int value);
+    int LoadInt(string key, int defaultValue = 0);
+}
+public class Storage : IStorage
 {
     public void SaveInt(string key, int value)
     {
