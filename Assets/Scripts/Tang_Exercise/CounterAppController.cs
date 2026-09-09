@@ -18,19 +18,23 @@ public class CounterAppController : MonoBehaviour,IController
 
     void Start()
     {
-        // 5. 获取模型
+        #region 获得注册的相关内容
         mModel = this.GetModel<ICounterAppModel>();
         var stotage = this.GetUtility<IStorage>();
-
+        #endregion
+        
         #region 表现逻辑相关对象获得
         // View 组件获取
         mBtnAdd = transform.Find("BtnAdd").GetComponent<Button>();
         mBtnSub = transform.Find("BtnSub").GetComponent<Button>();
         mCountText = transform.Find("CountText").GetComponent<TMP_Text>();
         #endregion
-        Debug.Log("当前初始保存的值："+mModel.Count);
-        Debug.Log(stotage.LoadInt("Count"));
 
+        #region 测试打印部分
+        Debug.Log("当前初始保存的值："+this.SendQuery(new CountAllquery()));
+        Debug.Log(stotage.LoadInt(nameof(mModel.Count)));
+        Debug.Log((nameof(mModel.Count)));
+        #endregion
 
         #region 将复用逻辑放入event容器中
         // this.RegisterEvent<CountAppChangeEvent>((e) =>
@@ -61,8 +65,7 @@ public class CounterAppController : MonoBehaviour,IController
 
         UpdateView();
         #endregion
-
-
+        
     }
     private void UpdateView()
     {
@@ -125,7 +128,7 @@ public class CounterAppArc : Architecture<CounterAppArc>
 
 #endregion
 
-#region system
+#region system管理长期检测的事件或者跨模块的内容
 public interface IAchievementSystem:ISystem
 {
     
@@ -149,7 +152,7 @@ public class AchievementSystem:AbstractSystem,IAchievementSystem
         //         Debug.Log("触发 点击菜鸟 成就");
         //     }
         // }));
-        model.Count.Register(count =>
+        model.Count.RegisterWithInitValue(count =>
         {
             if (count == 10)
             {
@@ -168,7 +171,8 @@ public class AchievementSystem:AbstractSystem,IAchievementSystem
 
 
 #endregion
-#region 命令（作为外部处理数据用的部分，目前来说是为了分担控制器压力
+
+#region 命令（一次性执行。作为外部处理数据用的部分，目前来说是为了分担控制器压力
 public class IncreaseCountCommand : AbstractCommand
 {
     protected override void OnExecute()
@@ -248,6 +252,16 @@ public class Storage : IStorage
     }
 }
 
+#endregion
+
+#region query专门用来查询数据或者计算的类
+public class CountAllquery : AbstractQuery<int>
+{
+    protected override int OnDo()
+    {
+        return this.GetModel<ICounterAppModel>().Count.Value;
+    }
+}
 #endregion
 
 
