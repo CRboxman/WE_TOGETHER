@@ -1,7 +1,8 @@
 {
   "dependencies": {
+    "com.coffee.ui-effect": "https://github.com/mob-sakai/UIEffect.git?path=Packages/src",
     "com.crboxman.sprite-skin-rebinder": "https://github.com/CRboxman/unity-2d-sprite-skin-rebinder.git",
-    "com.gamebooom.unity.mcp": "https://github.com/FunplayAI/funplay-unity-mcp.git",
+    "com.gamebooom.unity.mcp": "https://github.com/FunplayAI/funplay-unity-mcp.git#v0.6.7",
     "com.unity.collab-proxy": "2.12.4",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",

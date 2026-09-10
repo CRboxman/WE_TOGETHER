@@ -1,7 +1,7 @@
 # AGENTS.md
 
 <!-- Funplay Unity MCP managed project skills -->
-<!-- Funplay Unity MCP project skill versions: unity-mcp-workflow@1.0.2 -->
+<!-- Funplay Unity MCP project skill versions: unity-mcp-workflow@1.0.4, unity-ui-composition@1.0.4 -->
 
 # Funplay Unity MCP Project Guidance
 
@@ -9,11 +9,12 @@ This section is managed by Funplay MCP for Unity. Everything between the begin a
 
 ## Installed project skills
 
-- `funplay-unity-mcp-workflow` v1.0.2 - Efficient workflow for using Unity MCP to edit, import, compile, inspect, and test Unity projects.
+- `funplay-unity-mcp-workflow` v1.0.4 - Efficient workflow for using Unity MCP to edit, import, compile, inspect, and test Unity projects, including screenshot and Game View recording verification.
+- `funplay-unity-ui-composition` v1.0.4 - Build and revise responsive Unity uGUI mobile interfaces, including portrait and landscape layouts, safe areas, prefabs, auto layout, scrolling, text, input, animation, and performance validation.
 
-## Codex workflow rules
+## Agent workflow rules
 
-- Prefer project-local Funplay skills under `.codex/skills/`.
+- Prefer project-local Funplay skills: `.codex/skills/` for Codex, `.opencode/skills/` for OpenCode, `.dsh/skills/` for DeepSeek Harness, `.agents/skills/` for Antigravity.
 - Use `execute_code` as the primary Unity automation tool. For new snippets, include `using Funplay.Editor.Tools.Scripting;`, implement `IFunplayCommand`, and use `ctx.RegisterObjectCreation` / `RegisterObjectModification` / `DestroyObject` so changes participate in Undo automatically.
 - Confirm the Unity project root, active scene, and real object/prefab/asset path before edits. Treat user-provided object names as hints, not paths.
 - Inspect Unity objects through MCP before changing user-named scene or prefab targets. Carry the returned `instanceId` into follow-up calls (`find_method=by_id`) instead of re-resolving by name.

@@ -255,7 +255,11 @@ public class Storage : IStorage
 #endregion
 
 #region query专门用来查询数据或者计算的类
-public class CountAllquery : AbstractQuery<int>
+
+public interface IMyQuery:IQuery<int>{
+
+}
+public class CountAllquery : AbstractQuery<int>,IMyQuery
 {
     protected override int OnDo()
     {

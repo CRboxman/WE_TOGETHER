@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.coffee.ui-effect": {
+      "version": "https://github.com/mob-sakai/UIEffect.git?path=Packages/src",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "ff824c234121cd6dde7038c8e8ca4904d7f4d7f3"
+    },
     "com.crboxman.sprite-skin-rebinder": {
       "version": "https://github.com/CRboxman/unity-2d-sprite-skin-rebinder.git",
       "depth": 0,
@@ -10,14 +19,14 @@
       "hash": "44a7e48b3bfcbc8746730ef9ed09073e9f925254"
     },
     "com.gamebooom.unity.mcp": {
-      "version": "https://github.com/FunplayAI/funplay-unity-mcp.git",
+      "version": "https://github.com/FunplayAI/funplay-unity-mcp.git#v0.6.7",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.inputsystem": "1.7.0"
       },
-      "hash": "6183ea0901bc65fc8dbf423e8b9cbbc1fd9be5d9"
+      "hash": "f52087985c120ce01c068bd9d2a34d32cab19fcf"
     },
     "com.unity.2d.animation": {
       "version": "9.1.2",
