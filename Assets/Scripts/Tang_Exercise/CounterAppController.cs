@@ -35,6 +35,8 @@ public class CounterAppController : MonoBehaviour,IController
         Debug.Log("当前初始保存的值："+this.SendQuery(new CountAllquery()));
         Debug.Log(stotage.LoadInt(nameof(mModel.Count)));
         Debug.Log((nameof(mModel.Count)));
+        
+        
         #endregion
 
         #region 将复用逻辑放入event容器中
