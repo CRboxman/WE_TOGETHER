@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55e08940ce2bd4e109732979817ab489
+guid: 19f13fde860497a48ae2b785051ed21a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,7 +32,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 20
@@ -1765,7 +1765,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 322
+      x: 324
       y: 4
       width: 319
       height: 483
@@ -1816,7 +1816,17 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4294934528
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: -135.5, y: 241.5}
+      - {x: -159.5, y: 176.5}
+      - {x: -159.5, y: 1.5}
+      - {x: -140.5, y: -58.5}
+      - {x: -71.5, y: -47.5}
+      - {x: -51.5, y: 185.5}
+      - {x: 57.5, y: 186.5}
+      - {x: 159.5, y: -71.5}
+      - {x: 159.5, y: 241.5}
     vertices:
     - position: {x: 27.108234, y: 365.55905}
       boneWeight:

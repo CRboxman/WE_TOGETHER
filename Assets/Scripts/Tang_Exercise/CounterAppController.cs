@@ -36,7 +36,7 @@ public class CounterAppController : MonoBehaviour,IController
         Debug.Log(stotage.LoadInt(nameof(mModel.Count)));
         Debug.Log((nameof(mModel.Count)));
         
-        
+         
         #endregion
 
         #region 将复用逻辑放入event容器中
