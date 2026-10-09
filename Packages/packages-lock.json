@@ -19,14 +19,14 @@
       "hash": "44a7e48b3bfcbc8746730ef9ed09073e9f925254"
     },
     "com.gamebooom.unity.mcp": {
-      "version": "https://github.com/FunplayAI/funplay-unity-mcp.git#v0.6.7",
+      "version": "https://github.com/FunplayAI/funplay-unity-mcp.git#v0.7.0",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.inputsystem": "1.7.0"
       },
-      "hash": "f52087985c120ce01c068bd9d2a34d32cab19fcf"
+      "hash": "a18dfab3d830fdb0985c88d80e925a2ef5a68c3d"
     },
     "com.unity.2d.animation": {
       "version": "9.1.2",
