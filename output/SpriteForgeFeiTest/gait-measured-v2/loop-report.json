@@ -1,0 +1,985 @@
+{
+  "schema": "video2dsprite.loop_report.v1",
+  "tool": {
+    "name": "gait_loop",
+    "version": "0.4.0"
+  },
+  "frames": {
+    "directory": "../three-cycles-for-measurement",
+    "count": 72,
+    "first": "walk-000.png",
+    "last": "walk-071.png",
+    "fps": "20/1",
+    "canvas": [
+      512,
+      640
+    ]
+  },
+  "indexing": "0-based positions in the sorted *.png list; intervals are [start, endExclusive)",
+  "kind": "gait",
+  "state": "walk",
+  "analysis": {
+    "union": [
+      73,
+      35,
+      419,
+      515
+    ],
+    "global_size": [
+      69,
+      96
+    ],
+    "legs_size": [
+      160,
+      100
+    ],
+    "legs_top_px": 264,
+    "registration": true,
+    "reduction": 2,
+    "drift": {
+      "cx_slope_px_per_frame": 0.022863,
+      "ground_slope_px_per_frame": -0.003183
+    },
+    "lengths": {
+      "strideWindowFrames": [
+        10,
+        32
+      ]
+    },
+    "stepMedian": 0.010169,
+    "bodyHeightMedianPx": 455.0
+  },
+  "usableRange": {
+    "start": 0,
+    "endExclusive": 72,
+    "reference": [
+      2,
+      50
+    ],
+    "smoothFrames": 49,
+    "tolerance": 0.05,
+    "signals": [
+      "scale"
+    ],
+    "reason": null,
+    "maxDeviation": 0.000998
+  },
+  "holds": [],
+  "unusableFrames": [],
+  "period": {
+    "status": "ok",
+    "local_minima": [
+      [
+        10,
+        0.034397
+      ],
+      [
+        12,
+        0.033858
+      ],
+      [
+        24,
+        0.004413
+      ]
+    ],
+    "L1": 24,
+    "harmonics": [
+      {
+        "k": 1,
+        "lag": 24,
+        "lag_subframe": 24.003945,
+        "P": 0.004413
+      }
+    ],
+    "T": 24.003945,
+    "T_frames": 24.003945,
+    "T_seconds": 1.200197,
+    "S_frames": 48.007891,
+    "S_seconds": 2.400395,
+    "T_from_whole_clip": 24.003945,
+    "steady_frames": [
+      2,
+      39
+    ],
+    "steady_count": 38,
+    "stride_two_step_test": {
+      "pairs": 20,
+      "fraction_mirror_farther": 0.0,
+      "median_ratio": 0.687839,
+      "p10_ratio": 0.147849,
+      "same_lags": [
+        46,
+        50
+      ],
+      "mirror_lags": [
+        23,
+        26
+      ],
+      "distinct_steps": false
+    },
+    "half_period_test": {
+      "pairs": 38,
+      "fraction_mirror_farther": 0.947368,
+      "median_ratio": 5.239249,
+      "p10_ratio": 1.397878,
+      "same_lags": [
+        22,
+        26
+      ],
+      "mirror_lags": [
+        11,
+        14
+      ]
+    },
+    "step_structure": {
+      "silhouette_half_lag": 10,
+      "is_local_min": false,
+      "prominence_in_steps": 0.0,
+      "required": 0.2,
+      "present": false
+    },
+    "periodicity": 0.840777,
+    "P_over_step_at_T": 0.516224,
+    "verdict": "ambiguous",
+    "why": "no step structure inside T (the silhouette does not dip at T/2): T may itself be one step of a gait whose legs look alike, so one stride is taken as 2T; confirm left/right alternation",
+    "unusable_frames": []
+  },
+  "recommendation": {
+    "policy": "cycle",
+    "cycles": 1,
+    "window": {
+      "start": 21,
+      "endExclusive": 69,
+      "lastInclusive": 68,
+      "frames": 48,
+      "seconds": 2.4,
+      "files": [
+        "walk-021.png",
+        "walk-068.png"
+      ],
+      "step_median": 0.010276,
+      "max_step_over_median": 1.156662,
+      "max_step_over_same_phase": 1.144331,
+      "wrap_ratio": 1.150745,
+      "wrap_ratio_vs_median_step": 1.08775,
+      "seam_jump_ratio": 0.556649,
+      "context_repeat_ratio": 0.551019,
+      "context_pairs": 5,
+      "strides_global": 0.999836,
+      "strides": 1,
+      "local_period": 48.006045,
+      "phase_error_frames_local": -0.006045,
+      "tempo_vs_source_pct_global": 0.016439,
+      "tempo_vs_source_pct_local": 0.012594,
+      "nn_lag_median": 24.0,
+      "duplicate_phase_fraction": 0.0,
+      "root_dx_px_per_loop": 0.0,
+      "ground_dy_px_per_loop": 0.0,
+      "root_drift_pct_body": 0.0,
+      "covers": "one full stride (both steps)",
+      "step_durations_est": [
+        23.953611,
+        24.015881
+      ],
+      "steps_sum_vs_frames": -0.030508,
+      "step_asymmetry": 0.001298,
+      "unusable_frames_touched": [],
+      "two_step_ratio_min_in_window": 0.149453,
+      "holds_inside": [],
+      "score": 0.622522,
+      "classification": {
+        "class": "valid-1-cycle",
+        "reasons": [],
+        "notes": []
+      }
+    },
+    "sourceIndices": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68
+    ],
+    "durations_ms": [
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "confidence": {
+      "components": {
+        "periodicity": 1.0,
+        "two_step_evidence": 0.35,
+        "seam": 0.948981,
+        "wrap_step": 0.799414,
+        "root_drift": 1.0,
+        "smoothness": 1.0,
+        "step_timing": 1.0
+      },
+      "overall": 0.35,
+      "label": "low",
+      "review_priority": "manual-selection",
+      "review": [
+        "Play the 3x loop GIF at source fps and inspect the seam pair; pixel metrics cannot certify foot contact, hand or prop identity drift or the art itself.",
+        "Left/right alternation is not shown by pixels: confirm both steps appear, or ship the 2-stride window."
+      ]
+    },
+    "seam": {
+      "frames": 48,
+      "seam": 6.859671,
+      "adjacent_median": 6.04439,
+      "adjacent_p95": 7.657928,
+      "adjacent_max": 7.792401,
+      "seam_over_median": 1.134882,
+      "seam_over_p95": 0.895761,
+      "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first",
+      "mask": "union of visible pixels"
+    }
+  },
+  "candidates": {
+    "oneCycle": [
+      {
+        "start": 21,
+        "endExclusive": 69,
+        "lastInclusive": 68,
+        "frames": 48,
+        "seconds": 2.4,
+        "files": [
+          "walk-021.png",
+          "walk-068.png"
+        ],
+        "step_median": 0.010276,
+        "max_step_over_median": 1.156662,
+        "max_step_over_same_phase": 1.144331,
+        "wrap_ratio": 1.150745,
+        "wrap_ratio_vs_median_step": 1.08775,
+        "seam_jump_ratio": 0.556649,
+        "context_repeat_ratio": 0.551019,
+        "context_pairs": 5,
+        "strides_global": 0.999836,
+        "strides": 1,
+        "local_period": 48.006045,
+        "phase_error_frames_local": -0.006045,
+        "tempo_vs_source_pct_global": 0.016439,
+        "tempo_vs_source_pct_local": 0.012594,
+        "nn_lag_median": 24.0,
+        "duplicate_phase_fraction": 0.0,
+        "root_dx_px_per_loop": 0.0,
+        "ground_dy_px_per_loop": 0.0,
+        "root_drift_pct_body": 0.0,
+        "covers": "one full stride (both steps)",
+        "step_durations_est": [
+          23.953611,
+          24.015881
+        ],
+        "steps_sum_vs_frames": -0.030508,
+        "step_asymmetry": 0.001298,
+        "unusable_frames_touched": [],
+        "two_step_ratio_min_in_window": 0.149453,
+        "holds_inside": [],
+        "score": 0.622522,
+        "classification": {
+          "class": "valid-1-cycle",
+          "reasons": [],
+          "notes": []
+        }
+      },
+      {
+        "start": 16,
+        "endExclusive": 64,
+        "lastInclusive": 63,
+        "frames": 48,
+        "seconds": 2.4,
+        "files": [
+          "walk-016.png",
+          "walk-063.png"
+        ],
+        "step_median": 0.010276,
+        "max_step_over_median": 1.156662,
+        "max_step_over_same_phase": 1.144331,
+        "wrap_ratio": 1.299276,
+        "wrap_ratio_vs_median_step": 1.295994,
+        "seam_jump_ratio": 0.552724,
+        "context_repeat_ratio": 0.560054,
+        "context_pairs": 5,
+        "strides_global": 0.999836,
+        "strides": 1,
+        "local_period": 48.016175,
+        "phase_error_frames_local": -0.016175,
+        "tempo_vs_source_pct_global": 0.016439,
+        "tempo_vs_source_pct_local": 0.033697,
+        "nn_lag_median": 24.0,
+        "duplicate_phase_fraction": 0.0,
+        "root_dx_px_per_loop": 0.0,
+        "ground_dy_px_per_loop": 0.0,
+        "root_drift_pct_body": 0.0,
+        "covers": "one full stride (both steps)",
+        "step_durations_est": [
+          24.108248,
+          24.168144
+        ],
+        "steps_sum_vs_frames": 0.276393,
+        "step_asymmetry": 0.001241,
+        "unusable_frames_touched": [],
+        "two_step_ratio_min_in_window": 0.148514,
+        "holds_inside": [],
+        "score": 0.692198,
+        "classification": {
+          "class": "valid-1-cycle",
+          "reasons": [],
+          "notes": []
+        }
+      },
+      {
+        "start": 3,
+        "endExclusive": 51,
+        "lastInclusive": 50,
+        "frames": 48,
+        "seconds": 2.4,
+        "files": [
+          "walk-003.png",
+          "walk-050.png"
+        ],
+        "step_median": 0.010169,
+        "max_step_over_median": 1.621005,
+        "max_step_over_same_phase": 1.429917,
+        "wrap_ratio": 1.464509,
+        "wrap_ratio_vs_median_step": 1.534956,
+        "seam_jump_ratio": 0.907835,
+        "context_repeat_ratio": 0.917317,
+        "context_pairs": 5,
+        "strides_global": 0.999836,
+        "strides": 1,
+        "local_period": 48.016175,
+        "phase_error_frames_local": -0.016175,
+        "tempo_vs_source_pct_global": 0.016439,
+        "tempo_vs_source_pct_local": 0.033697,
+        "nn_lag_median": 24.0,
+        "duplicate_phase_fraction": 0.0,
+        "root_dx_px_per_loop": 0.0,
+        "ground_dy_px_per_loop": 0.0,
+        "root_drift_pct_body": 0.0,
+        "covers": "one full stride (both steps)",
+        "step_durations_est": [
+          24.019871,
+          24.076797
+        ],
+        "steps_sum_vs_frames": 0.096668,
+        "step_asymmetry": 0.001184,
+        "unusable_frames_touched": [],
+        "two_step_ratio_min_in_window": 0.148514,
+        "holds_inside": [],
+        "score": 1.109261,
+        "classification": {
+          "class": "valid-1-cycle",
+          "reasons": [],
+          "notes": []
+        }
+      },
+      {
+        "start": 0,
+        "endExclusive": 48,
+        "lastInclusive": 47,
+        "frames": 48,
+        "seconds": 2.4,
+        "files": [
+          "walk-000.png",
+          "walk-047.png"
+        ],
+        "step_median": 0.010169,
+        "max_step_over_median": 1.621005,
+        "max_step_over_same_phase": 1.429917,
+        "wrap_ratio": 1.447129,
+        "wrap_ratio_vs_median_step": 1.481808,
+        "seam_jump_ratio": 0.995083,
+        "context_repeat_ratio": 0.958134,
+        "context_pairs": 3,
+        "strides_global": 0.999836,
+        "strides": 1,
+        "local_period": 48.016175,
+        "phase_error_frames_local": -0.016175,
+        "tempo_vs_source_pct_global": 0.016439,
+        "tempo_vs_source_pct_local": 0.033697,
+        "nn_lag_median": 12.5,
+        "duplicate_phase_fraction": 0.0,
+        "root_dx_px_per_loop": 0.0,
+        "ground_dy_px_per_loop": 0.0,
+        "root_drift_pct_body": 0.0,
+        "covers": "one full stride (both steps)",
+        "step_durations_est": [
+          23.961293,
+          24.011505
+        ],
+        "steps_sum_vs_frames": -0.027202,
+        "step_asymmetry": 0.001047,
+        "unusable_frames_touched": [],
+        "two_step_ratio_min_in_window": 0.148514,
+        "holds_inside": [],
+        "score": 1.143971,
+        "classification": {
+          "class": "valid-1-cycle",
+          "reasons": [],
+          "notes": []
+        }
+      }
+    ],
+    "twoCycle": []
+  },
+  "evaluated": [
+    {
+      "start": 0,
+      "endExclusive": 24,
+      "lastInclusive": 23,
+      "frames": 24,
+      "seconds": 1.2,
+      "files": [
+        "walk-000.png",
+        "walk-023.png"
+      ],
+      "step_median": 0.010111,
+      "max_step_over_median": 1.630327,
+      "max_step_over_same_phase": 1.429917,
+      "wrap_ratio": 1.447129,
+      "wrap_ratio_vs_median_step": 1.49033,
+      "seam_jump_ratio": 1.000806,
+      "context_repeat_ratio": 0.963644,
+      "context_pairs": 3,
+      "strides_global": 0.499918,
+      "strides": 1,
+      "local_period": 48.005176,
+      "phase_error_frames_local": -24.005176,
+      "tempo_vs_source_pct_global": 100.032877,
+      "tempo_vs_source_pct_local": 100.021566,
+      "nn_lag_median": 6.0,
+      "duplicate_phase_fraction": 0.0,
+      "root_dx_px_per_loop": 0.0,
+      "ground_dy_px_per_loop": 0.0,
+      "root_drift_pct_body": 0.0,
+      "covers": "0.50 strides (partial or irregular)",
+      "step_durations_est": [
+        23.961293
+      ],
+      "steps_sum_vs_frames": null,
+      "step_asymmetry": null,
+      "unusable_frames_touched": [],
+      "two_step_ratio_min_in_window": 0.148514,
+      "holds_inside": [],
+      "score": 1.398435,
+      "classification": {
+        "class": "rejected",
+        "reasons": [
+          "half stride: 24 frames hold one step of the 48.01-frame stride, so the loop would repeat one leg"
+        ],
+        "notes": []
+      }
+    }
+  ],
+  "aids": null,
+  "qa": {
+    "status": "needs-visual-review",
+    "method": "gait_loop select (walk): harmonic least-squares period 24.00 frames, ambiguous half-period guard, unified seam score",
+    "notProven": [
+      "foot contact, sliding and ground penetration",
+      "hand, hair, scarf or prop identity drift between frames",
+      "art quality, anatomy and facing",
+      "left/right alternation beyond the pixel evidence reported here"
+    ],
+    "checks": [
+      {
+        "id": "loop-found",
+        "status": "pass",
+        "value": [
+          21,
+          69
+        ]
+      },
+      {
+        "id": "half-period-guard",
+        "status": "pass",
+        "value": "ambiguous"
+      },
+      {
+        "id": "seam_over_p95",
+        "status": "pass",
+        "value": 0.895761,
+        "threshold": 1.0
+      },
+      {
+        "id": "confidence",
+        "status": "warn",
+        "value": 0.35,
+        "threshold": 0.4
+      },
+      {
+        "id": "drift-free-range",
+        "status": "pass",
+        "value": 72
+      },
+      {
+        "id": "visual-review",
+        "status": "needs-visual-review",
+        "value": null
+      }
+    ],
+    "inputs": [
+      {
+        "path": "../three-cycles-for-measurement/walk-000.png",
+        "sha256": "c16e7322d2fccf7da41ae11e9f1776fad740ecc958ee7f7fca00ca2311df10c0",
+        "bytes": 119218
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-001.png",
+        "sha256": "d6960b3b5828293db3cf596810b7229be24e50233df3e70e26ee18600809ffac",
+        "bytes": 120053
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-002.png",
+        "sha256": "feff3dba53e1a6c4eb5e03b89253146fe13997a36f818c861f180918a2f58d8c",
+        "bytes": 119626
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-003.png",
+        "sha256": "6401768013d6dab6c1f392babe06852eb27ad9436b020b2a5bcd8788dacfd905",
+        "bytes": 119671
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-004.png",
+        "sha256": "ad26ac9dce1c1859ae35d9c49f6d666c5d1015271aa70fb205ee2c17e3e247fc",
+        "bytes": 119235
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-005.png",
+        "sha256": "4913ea55871d930672c4e68b343c0ae6152b7ecf0194654601fb5ea700f696b4",
+        "bytes": 119985
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-006.png",
+        "sha256": "604667bc9a70948981726fd5404b42208e65774a84dff6a05fc640a91f432de6",
+        "bytes": 120122
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-007.png",
+        "sha256": "55674ec9e114f33c42f7e5f5480d6636857140fed8817a8888ec365c41746d99",
+        "bytes": 120102
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-008.png",
+        "sha256": "0e70db47a58aa4f8358267f355be8bfdb878364540404f89760a3fd155d0b1c5",
+        "bytes": 119664
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-009.png",
+        "sha256": "61061a3e7de11790dac339c801dcd09120b9fff04c2505138bd74434bf0f3a15",
+        "bytes": 120161
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-010.png",
+        "sha256": "4bd8f9c370677e8103864f4f87244c1c4c9fd3c28f785a93fc6b97ae84b239bc",
+        "bytes": 119873
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-011.png",
+        "sha256": "1dc7557ea66927121eaa371d10763be3ba2d076ed88741c05d11cc2e041f32fc",
+        "bytes": 120013
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-012.png",
+        "sha256": "911d85b43b6c1709d2668ac5aeff8659c83fd862f50f9aef0c92e9c79e5fdeeb",
+        "bytes": 119038
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-013.png",
+        "sha256": "35499ee9bcf697067c4a656e2469e543159b2e3a1dfbe123aa987f44437698a1",
+        "bytes": 120536
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-014.png",
+        "sha256": "04c7c24cc796c67f1e9e51e5289842f8cb60bbfe94ee744c33df32d351c3ada8",
+        "bytes": 121329
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-015.png",
+        "sha256": "40f76ce6a86839e69845494c5a17b10631b8f17f6124b442baac90811cc1a909",
+        "bytes": 122105
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-016.png",
+        "sha256": "8bbdd4c68eadc6c40a1902464288d893a885deec65c595801ea8dfeba35f5b60",
+        "bytes": 122681
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-017.png",
+        "sha256": "35b6a3c95421115a017caa0cf659b2ae5f045bff32f38921689c7a3603498b96",
+        "bytes": 123375
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-018.png",
+        "sha256": "2ba369dfe8c5ab4cfbcc5f9f0fdbf363f940498669beb4479b207c0efdd3b06a",
+        "bytes": 123448
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-019.png",
+        "sha256": "64c2253be280006718f866f612b507fe85baffecddf50197beece296c3c8a1b9",
+        "bytes": 123412
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-020.png",
+        "sha256": "5100de08ac74580bd70ab79db143622e95b931047268980ba0f6967f46b8de11",
+        "bytes": 122749
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-021.png",
+        "sha256": "39315223774513d51aeba4011e16d770e1a6278458305d089ae93c4cae359076",
+        "bytes": 122341
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-022.png",
+        "sha256": "4acc7ed82d8d90b27caa05364274808906c6d2176d5d4c7c166a2144c167421e",
+        "bytes": 121512
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-023.png",
+        "sha256": "f34f35bbec20af2edc93ec242d12eb6b631b9b57f9924228372f3f3de3cf0e07",
+        "bytes": 120685
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-024.png",
+        "sha256": "c16e7322d2fccf7da41ae11e9f1776fad740ecc958ee7f7fca00ca2311df10c0",
+        "bytes": 119218
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-025.png",
+        "sha256": "d6960b3b5828293db3cf596810b7229be24e50233df3e70e26ee18600809ffac",
+        "bytes": 120053
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-026.png",
+        "sha256": "feff3dba53e1a6c4eb5e03b89253146fe13997a36f818c861f180918a2f58d8c",
+        "bytes": 119626
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-027.png",
+        "sha256": "6401768013d6dab6c1f392babe06852eb27ad9436b020b2a5bcd8788dacfd905",
+        "bytes": 119671
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-028.png",
+        "sha256": "ad26ac9dce1c1859ae35d9c49f6d666c5d1015271aa70fb205ee2c17e3e247fc",
+        "bytes": 119235
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-029.png",
+        "sha256": "4913ea55871d930672c4e68b343c0ae6152b7ecf0194654601fb5ea700f696b4",
+        "bytes": 119985
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-030.png",
+        "sha256": "604667bc9a70948981726fd5404b42208e65774a84dff6a05fc640a91f432de6",
+        "bytes": 120122
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-031.png",
+        "sha256": "55674ec9e114f33c42f7e5f5480d6636857140fed8817a8888ec365c41746d99",
+        "bytes": 120102
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-032.png",
+        "sha256": "0e70db47a58aa4f8358267f355be8bfdb878364540404f89760a3fd155d0b1c5",
+        "bytes": 119664
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-033.png",
+        "sha256": "61061a3e7de11790dac339c801dcd09120b9fff04c2505138bd74434bf0f3a15",
+        "bytes": 120161
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-034.png",
+        "sha256": "4bd8f9c370677e8103864f4f87244c1c4c9fd3c28f785a93fc6b97ae84b239bc",
+        "bytes": 119873
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-035.png",
+        "sha256": "1dc7557ea66927121eaa371d10763be3ba2d076ed88741c05d11cc2e041f32fc",
+        "bytes": 120013
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-036.png",
+        "sha256": "911d85b43b6c1709d2668ac5aeff8659c83fd862f50f9aef0c92e9c79e5fdeeb",
+        "bytes": 119038
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-037.png",
+        "sha256": "35499ee9bcf697067c4a656e2469e543159b2e3a1dfbe123aa987f44437698a1",
+        "bytes": 120536
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-038.png",
+        "sha256": "04c7c24cc796c67f1e9e51e5289842f8cb60bbfe94ee744c33df32d351c3ada8",
+        "bytes": 121329
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-039.png",
+        "sha256": "40f76ce6a86839e69845494c5a17b10631b8f17f6124b442baac90811cc1a909",
+        "bytes": 122105
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-040.png",
+        "sha256": "8bbdd4c68eadc6c40a1902464288d893a885deec65c595801ea8dfeba35f5b60",
+        "bytes": 122681
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-041.png",
+        "sha256": "35b6a3c95421115a017caa0cf659b2ae5f045bff32f38921689c7a3603498b96",
+        "bytes": 123375
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-042.png",
+        "sha256": "2ba369dfe8c5ab4cfbcc5f9f0fdbf363f940498669beb4479b207c0efdd3b06a",
+        "bytes": 123448
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-043.png",
+        "sha256": "64c2253be280006718f866f612b507fe85baffecddf50197beece296c3c8a1b9",
+        "bytes": 123412
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-044.png",
+        "sha256": "5100de08ac74580bd70ab79db143622e95b931047268980ba0f6967f46b8de11",
+        "bytes": 122749
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-045.png",
+        "sha256": "39315223774513d51aeba4011e16d770e1a6278458305d089ae93c4cae359076",
+        "bytes": 122341
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-046.png",
+        "sha256": "4acc7ed82d8d90b27caa05364274808906c6d2176d5d4c7c166a2144c167421e",
+        "bytes": 121512
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-047.png",
+        "sha256": "f34f35bbec20af2edc93ec242d12eb6b631b9b57f9924228372f3f3de3cf0e07",
+        "bytes": 120685
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-048.png",
+        "sha256": "c16e7322d2fccf7da41ae11e9f1776fad740ecc958ee7f7fca00ca2311df10c0",
+        "bytes": 119218
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-049.png",
+        "sha256": "d6960b3b5828293db3cf596810b7229be24e50233df3e70e26ee18600809ffac",
+        "bytes": 120053
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-050.png",
+        "sha256": "feff3dba53e1a6c4eb5e03b89253146fe13997a36f818c861f180918a2f58d8c",
+        "bytes": 119626
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-051.png",
+        "sha256": "6401768013d6dab6c1f392babe06852eb27ad9436b020b2a5bcd8788dacfd905",
+        "bytes": 119671
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-052.png",
+        "sha256": "ad26ac9dce1c1859ae35d9c49f6d666c5d1015271aa70fb205ee2c17e3e247fc",
+        "bytes": 119235
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-053.png",
+        "sha256": "4913ea55871d930672c4e68b343c0ae6152b7ecf0194654601fb5ea700f696b4",
+        "bytes": 119985
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-054.png",
+        "sha256": "604667bc9a70948981726fd5404b42208e65774a84dff6a05fc640a91f432de6",
+        "bytes": 120122
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-055.png",
+        "sha256": "55674ec9e114f33c42f7e5f5480d6636857140fed8817a8888ec365c41746d99",
+        "bytes": 120102
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-056.png",
+        "sha256": "0e70db47a58aa4f8358267f355be8bfdb878364540404f89760a3fd155d0b1c5",
+        "bytes": 119664
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-057.png",
+        "sha256": "61061a3e7de11790dac339c801dcd09120b9fff04c2505138bd74434bf0f3a15",
+        "bytes": 120161
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-058.png",
+        "sha256": "4bd8f9c370677e8103864f4f87244c1c4c9fd3c28f785a93fc6b97ae84b239bc",
+        "bytes": 119873
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-059.png",
+        "sha256": "1dc7557ea66927121eaa371d10763be3ba2d076ed88741c05d11cc2e041f32fc",
+        "bytes": 120013
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-060.png",
+        "sha256": "911d85b43b6c1709d2668ac5aeff8659c83fd862f50f9aef0c92e9c79e5fdeeb",
+        "bytes": 119038
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-061.png",
+        "sha256": "35499ee9bcf697067c4a656e2469e543159b2e3a1dfbe123aa987f44437698a1",
+        "bytes": 120536
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-062.png",
+        "sha256": "04c7c24cc796c67f1e9e51e5289842f8cb60bbfe94ee744c33df32d351c3ada8",
+        "bytes": 121329
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-063.png",
+        "sha256": "40f76ce6a86839e69845494c5a17b10631b8f17f6124b442baac90811cc1a909",
+        "bytes": 122105
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-064.png",
+        "sha256": "8bbdd4c68eadc6c40a1902464288d893a885deec65c595801ea8dfeba35f5b60",
+        "bytes": 122681
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-065.png",
+        "sha256": "35b6a3c95421115a017caa0cf659b2ae5f045bff32f38921689c7a3603498b96",
+        "bytes": 123375
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-066.png",
+        "sha256": "2ba369dfe8c5ab4cfbcc5f9f0fdbf363f940498669beb4479b207c0efdd3b06a",
+        "bytes": 123448
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-067.png",
+        "sha256": "64c2253be280006718f866f612b507fe85baffecddf50197beece296c3c8a1b9",
+        "bytes": 123412
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-068.png",
+        "sha256": "5100de08ac74580bd70ab79db143622e95b931047268980ba0f6967f46b8de11",
+        "bytes": 122749
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-069.png",
+        "sha256": "39315223774513d51aeba4011e16d770e1a6278458305d089ae93c4cae359076",
+        "bytes": 122341
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-070.png",
+        "sha256": "4acc7ed82d8d90b27caa05364274808906c6d2176d5d4c7c166a2144c167421e",
+        "bytes": 121512
+      },
+      {
+        "path": "../three-cycles-for-measurement/walk-071.png",
+        "sha256": "f34f35bbec20af2edc93ec242d12eb6b631b9b57f9924228372f3f3de3cf0e07",
+        "bytes": 120685
+      }
+    ],
+    "outputs": [
+      {
+        "path": "selection.json",
+        "sha256": "e44f164226494e1a7eabacd7a1c3b3009189395c6946e4df44ce6d8d4d66731b",
+        "bytes": 6365
+      }
+    ],
+    "tool": {
+      "name": "gait_loop",
+      "version": "0.4.0"
+    }
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "schema": "video2dsprite.finish.v1",
+  "tool": {
+    "name": "finish_frames",
+    "version": "0.4.0"
+  },
+  "mode": "hd",
+  "clip": "finished",
+  "character": "Fei",
+  "role": "hero",
+  "source": {
+    "frames": "../raw",
+    "count": 24,
+    "size": [
+      512,
+      640
+    ],
+    "pattern": "*.png",
+    "registration": null
+  },
+  "rest": {
+    "frame": 0,
+    "topPx": 52,
+    "feetPx": 505,
+    "heightPx": 453,
+    "areaPx": 66760,
+    "stanceX": 202.0,
+    "centroid": [
+      221.83882564409825,
+      246.5479628520072
+    ],
+    "minRun": 6
+  },
+  "anchorMode": "feet",
+  "anchorSource": [
+    202.0,
+    505.0
+  ],
+  "scale": 0.565121412803532,
+  "scaleSource": "target-height",
+  "targetHeight": 256.0,
+  "scaleRef": null,
+  "size": [
+    189,
+    264
+  ],
+  "anchor": [
+    70,
+    262
+  ],
+  "canvas": null,
+  "engine": {
+    "sourceSize": [
+      189,
+      264
+    ],
+    "sourceAnchor": [
+      70,
+      262
+    ],
+    "sampling": "linear",
+    "pixelArt": false,
+    "note": "engine_export.py package --clean-dir <out>/frames --source-size W,H --source-anchor X,Y (no --registration; add --pixel-art --sampling nearest for pixel)"
+  },
+  "resampler": "box",
+  "restOutput": {
+    "heightPx": 256.0,
+    "areaPx": 21320.621,
+    "bodyHeightPx": 256.0,
+    "outlinePx": 0,
+    "measuredHeightPx": 256,
+    "measuredAreaPx": 21334
+  },
+  "displaySizes": [
+    {
+      "label": "1x",
+      "dir": "frames",
+      "scale": 0.565121412803532,
+      "size": [
+        189,
+        264
+      ],
+      "anchor": [
+        70,
+        262
+      ],
+      "targetHeight": 256.0,
+      "flicker": {
+        "pairs": 24,
+        "alphaFlipsPerPair": 586.333,
+        "indexFlipsPerPair": null,
+        "noiseFlipsPerPair": 1.5,
+        "edgeFlipsPerPair": 1.5
+      },
+      "alphaBinary": false
+    }
+  ],
+  "palette": null,
+  "pixel": null,
+  "colourLock": null,
+  "indexedSheet": null,
+  "loopPolicy": "cycle",
+  "frames": [
+    {
+      "file": "frames/walk-00.png",
+      "sha256": "ccbc99b44f2a9a3e0b10ff69cde52c05280b5718b8a894138317e5744eca0779",
+      "sourceFile": "walk-00.png",
+      "sourceSha256": "c16e7322d2fccf7da41ae11e9f1776fad740ecc958ee7f7fca00ca2311df10c0",
+      "opaquePx": 21334
+    },
+    {
+      "file": "frames/walk-01.png",
+      "sha256": "9e14dff0031ae44993fc079ea36bacdc9ece70d229e2b216f7621f8a6ac1d4af",
+      "sourceFile": "walk-01.png",
+      "sourceSha256": "d6960b3b5828293db3cf596810b7229be24e50233df3e70e26ee18600809ffac",
+      "opaquePx": 21366
+    },
+    {
+      "file": "frames/walk-02.png",
+      "sha256": "e6e8f8b323b78e0d1ee8eb83ee9e4f35611b00458f2ea9dcf8ab7384b6cc60ab",
+      "sourceFile": "walk-02.png",
+      "sourceSha256": "feff3dba53e1a6c4eb5e03b89253146fe13997a36f818c861f180918a2f58d8c",
+      "opaquePx": 21293
+    },
+    {
+      "file": "frames/walk-03.png",
+      "sha256": "c65c5989d30bed8ca14a8016af8dd81fd2475670c631dc820626494afcf44daf",
+      "sourceFile": "walk-03.png",
+      "sourceSha256": "6401768013d6dab6c1f392babe06852eb27ad9436b020b2a5bcd8788dacfd905",
+      "opaquePx": 21180
+    },
+    {
+      "file": "frames/walk-04.png",
+      "sha256": "fdb1b1954c5a1ad2e5929e8c4bca4e7c19269164f5fde575f0a5104958dbd033",
+      "sourceFile": "walk-04.png",
+      "sourceSha256": "ad26ac9dce1c1859ae35d9c49f6d666c5d1015271aa70fb205ee2c17e3e247fc",
+      "opaquePx": 21153
+    },
+    {
+      "file": "frames/walk-05.png",
+      "sha256": "49d21feed460eb17927c50ffe9a6270152fadb8f68fd1941e88b0ac6018c8e96",
+      "sourceFile": "walk-05.png",
+      "sourceSha256": "4913ea55871d930672c4e68b343c0ae6152b7ecf0194654601fb5ea700f696b4",
+      "opaquePx": 21176
+    },
+    {
+      "file": "frames/walk-06.png",
+      "sha256": "091e8484a745f9f894cb398ff8c6dd465058d9e343ded7e8ef634e6a57323379",
+      "sourceFile": "walk-06.png",
+      "sourceSha256": "604667bc9a70948981726fd5404b42208e65774a84dff6a05fc640a91f432de6",
+      "opaquePx": 21182
+    },
+    {
+      "file": "frames/walk-07.png",
+      "sha256": "ae05a1321dc86a6c5a7870bdf0977c56c65ae7779130978bfd00b96042d1ef55",
+      "sourceFile": "walk-07.png",
+      "sourceSha256": "55674ec9e114f33c42f7e5f5480d6636857140fed8817a8888ec365c41746d99",
+      "opaquePx": 21195
+    },
+    {
+      "file": "frames/walk-08.png",
+      "sha256": "889b66bcb9bc0664391bb3f65067fa3348476c4d8063be291949fdf788e7b837",
+      "sourceFile": "walk-08.png",
+      "sourceSha256": "0e70db47a58aa4f8358267f355be8bfdb878364540404f89760a3fd155d0b1c5",
+      "opaquePx": 21186
+    },
+    {
+      "file": "frames/walk-09.png",
+      "sha256": "9701775eea6cafbe975838340dc8f0d2aa29d7c41deeb027309c995a772a3e5d",
+      "sourceFile": "walk-09.png",
+      "sourceSha256": "61061a3e7de11790dac339c801dcd09120b9fff04c2505138bd74434bf0f3a15",
+      "opaquePx": 21223
+    },
+    {
+      "file": "frames/walk-10.png",
+      "sha256": "3739df3ba13627abd481fbb7945d7e8f6bf81d9f202e61fb450c159c140891c9",
+      "sourceFile": "walk-10.png",
+      "sourceSha256": "4bd8f9c370677e8103864f4f87244c1c4c9fd3c28f785a93fc6b97ae84b239bc",
+      "opaquePx": 21343
+    },
+    {
+      "file": "frames/walk-11.png",
+      "sha256": "ec40275cbdd81f504e6b88be91581f24cc783387825d1e24c2fc9f99f44f4cd1",
+      "sourceFile": "walk-11.png",
+      "sourceSha256": "1dc7557ea66927121eaa371d10763be3ba2d076ed88741c05d11cc2e041f32fc",
+      "opaquePx": 21426
+    },
+    {
+      "file": "frames/walk-12.png",
+      "sha256": "6fe2b1b2d6b024f1fe03c6ee0c6bd8780d2f74966845d192a39087a2afe4bb5f",
+      "sourceFile": "walk-12.png",
+      "sourceSha256": "911d85b43b6c1709d2668ac5aeff8659c83fd862f50f9aef0c92e9c79e5fdeeb",
+      "opaquePx": 21390
+    },
+    {
+      "file": "frames/walk-13.png",
+      "sha256": "a1476d60780e511b2662336262029627086ab481bfe49468daa0dfef292ab827",
+      "sourceFile": "walk-13.png",
+      "sourceSha256": "35499ee9bcf697067c4a656e2469e543159b2e3a1dfbe123aa987f44437698a1",
+      "opaquePx": 21302
+    },
+    {
+      "file": "frames/walk-14.png",
+      "sha256": "f82bf014f8e85831e518894416b61a63ac13698daad473932ae3e5d26413926a",
+      "sourceFile": "walk-14.png",
+      "sourceSha256": "04c7c24cc796c67f1e9e51e5289842f8cb60bbfe94ee744c33df32d351c3ada8",
+      "opaquePx": 21271
+    },
+    {
+      "file": "frames/walk-15.png",
+      "sha256": "af7feac8c93e42211aec26d6e522e687920da6a5271e3be1d0cabb5fd61a0b58",
+      "sourceFile": "walk-15.png",
+      "sourceSha256": "40f76ce6a86839e69845494c5a17b10631b8f17f6124b442baac90811cc1a909",
+      "opaquePx": 21271
+    },
+    {
+      "file": "frames/walk-16.png",
+      "sha256": "d2818db7a941129ff82637d858d8f8e2f50d616bcb5e3f25f6373be3a28b2958",
+      "sourceFile": "walk-16.png",
+      "sourceSha256": "8bbdd4c68eadc6c40a1902464288d893a885deec65c595801ea8dfeba35f5b60",
+      "opaquePx": 21259
+    },
+    {
+      "file": "frames/walk-17.png",
+      "sha256": "975bf21305a590f640a2792591a8b2401a1efc210bce51f2384de6dba85f7f8b",
+      "sourceFile": "walk-17.png",
+      "sourceSha256": "35b6a3c95421115a017caa0cf659b2ae5f045bff32f38921689c7a3603498b96",
+      "opaquePx": 21247
+    },
+    {
+      "file": "frames/walk-18.png",
+      "sha256": "46feed01c0b9865de5a00b5030d6c5c0c46cd39b59ff792d139870f322a36c3a",
+      "sourceFile": "walk-18.png",
+      "sourceSha256": "2ba369dfe8c5ab4cfbcc5f9f0fdbf363f940498669beb4479b207c0efdd3b06a",
+      "opaquePx": 21262
+    },
+    {
+      "file": "frames/walk-19.png",
+      "sha256": "1c98e506995fea38840d5c834ff684417f6f5f0f075cf086a0d0ef53f0000753",
+      "sourceFile": "walk-19.png",
+      "sourceSha256": "64c2253be280006718f866f612b507fe85baffecddf50197beece296c3c8a1b9",
+      "opaquePx": 21238
+    },
+    {
+      "file": "frames/walk-20.png",
+      "sha256": "fc3476533a4ac782b79250c8a789773753d4a43f01e2c50a5d615bea3f51a7f9",
+      "sourceFile": "walk-20.png",
+      "sourceSha256": "5100de08ac74580bd70ab79db143622e95b931047268980ba0f6967f46b8de11",
+      "opaquePx": 21242
+    },
+    {
+      "file": "frames/walk-21.png",
+      "sha256": "7753bd499010c94c22925052d3a982eb71c9e8b2d8fff5a50e79396ec2e83347",
+      "sourceFile": "walk-21.png",
+      "sourceSha256": "39315223774513d51aeba4011e16d770e1a6278458305d089ae93c4cae359076",
+      "opaquePx": 21245
+    },
+    {
+      "file": "frames/walk-22.png",
+      "sha256": "e93da69f5544ec194a7893b29de32086429e330d19df9a51ee1be39b1ce9c065",
+      "sourceFile": "walk-22.png",
+      "sourceSha256": "4acc7ed82d8d90b27caa05364274808906c6d2176d5d4c7c166a2144c167421e",
+      "opaquePx": 21232
+    },
+    {
+      "file": "frames/walk-23.png",
+      "sha256": "18726551e146a6d595d23e17cb669b1ba16cef3892b1e3a78c88f8c47ebf92ae",
+      "sourceFile": "walk-23.png",
+      "sourceSha256": "f34f35bbec20af2edc93ec242d12eb6b631b9b57f9924228372f3f3de3cf0e07",
+      "opaquePx": 21257
+    }
+  ],
+  "flicker": {
+    "pairs": 24,
+    "alphaFlipsPerPair": 586.333,
+    "indexFlipsPerPair": null,
+    "noiseFlipsPerPair": 1.5,
+    "edgeFlipsPerPair": 1.5
+  },
+  "specksRemoved": 0,
+  "alphaBinary": false,
+  "review": {
+    "path": "review-contact.png",
+    "frames": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23
+    ]
+  },
+  "qa": {
+    "status": "needs-visual-review",
+    "method": "finish_frames hd v1: one scale per clip from the rest pose (target height / rest height at the 50% alpha contour, rows with >= 6 px; or scale-ref x sqrt(rest-area ratio) clamped to +-3%), forge_core.resample_rgba box (area) on premultiplied float channels with the output grid pinned to the anchor (stance midpoint on the feet line, or the alpha centroid), forge_core.alpha_hygiene(both, floor 4), canvas = union of alpha > 4 plus 1 px; never nearest, never an upscale; display sizes re-derived from the source frames",
+    "notProven": [
+      "identity, pose and readability at the finished size (look at review-contact.png and the frames)",
+      "that the target height suits the game camera and the rest of the cast (run lineup)",
+      "loop seams and timing (gait_loop, retime); finished frames keep the source names",
+      "engine blending: draw with premultiplied alpha (RGB under alpha 0 is zeroed)"
+    ],
+    "checks": [
+      {
+        "id": "no-upscale",
+        "status": "pass",
+        "value": 0.565121,
+        "threshold": 1.0
+      },
+      {
+        "id": "rest-height",
+        "status": "pass",
+        "value": 0.0,
+        "threshold": 1.5,
+        "note": "|measured - nominal| rest-pose body height at 1x (outline included), output px"
+      },
+      {
+        "id": "empty-frames",
+        "status": "pass",
+        "value": [],
+        "threshold": 0
+      },
+      {
+        "id": "flicker",
+        "status": "skipped",
+        "value": {
+          "pairs": 24,
+          "alphaFlipsPerPair": 586.333,
+          "indexFlipsPerPair": null,
+          "noiseFlipsPerPair": 1.5,
+          "edgeFlipsPerPair": 1.5
+        },
+        "threshold": null
+      },
+      {
+        "id": "alpha-hygiene",
+        "status": "skipped",
+        "value": {
+          "floor_px": 4809,
+          "detached_px": 0,
+          "detached_components": 0,
+          "mode": "both",
+          "floor": 4
+        },
+        "threshold": null
+      }
+    ],
+    "inputs": [
+      {
+        "path": "../raw/walk-00.png",
+        "sha256": "c16e7322d2fccf7da41ae11e9f1776fad740ecc958ee7f7fca00ca2311df10c0"
+      },
+      {
+        "path": "../raw/walk-01.png",
+        "sha256": "d6960b3b5828293db3cf596810b7229be24e50233df3e70e26ee18600809ffac"
+      },
+      {
+        "path": "../raw/walk-02.png",
+        "sha256": "feff3dba53e1a6c4eb5e03b89253146fe13997a36f818c861f180918a2f58d8c"
+      },
+      {
+        "path": "../raw/walk-03.png",
+        "sha256": "6401768013d6dab6c1f392babe06852eb27ad9436b020b2a5bcd8788dacfd905"
+      },
+      {
+        "path": "../raw/walk-04.png",
+        "sha256": "ad26ac9dce1c1859ae35d9c49f6d666c5d1015271aa70fb205ee2c17e3e247fc"
+      },
+      {
+        "path": "../raw/walk-05.png",
+        "sha256": "4913ea55871d930672c4e68b343c0ae6152b7ecf0194654601fb5ea700f696b4"
+      },
+      {
+        "path": "../raw/walk-06.png",
+        "sha256": "604667bc9a70948981726fd5404b42208e65774a84dff6a05fc640a91f432de6"
+      },
+      {
+        "path": "../raw/walk-07.png",
+        "sha256": "55674ec9e114f33c42f7e5f5480d6636857140fed8817a8888ec365c41746d99"
+      },
+      {
+        "path": "../raw/walk-08.png",
+        "sha256": "0e70db47a58aa4f8358267f355be8bfdb878364540404f89760a3fd155d0b1c5"
+      },
+      {
+        "path": "../raw/walk-09.png",
+        "sha256": "61061a3e7de11790dac339c801dcd09120b9fff04c2505138bd74434bf0f3a15"
+      },
+      {
+        "path": "../raw/walk-10.png",
+        "sha256": "4bd8f9c370677e8103864f4f87244c1c4c9fd3c28f785a93fc6b97ae84b239bc"
+      },
+      {
+        "path": "../raw/walk-11.png",
+        "sha256": "1dc7557ea66927121eaa371d10763be3ba2d076ed88741c05d11cc2e041f32fc"
+      },
+      {
+        "path": "../raw/walk-12.png",
+        "sha256": "911d85b43b6c1709d2668ac5aeff8659c83fd862f50f9aef0c92e9c79e5fdeeb"
+      },
+      {
+        "path": "../raw/walk-13.png",
+        "sha256": "35499ee9bcf697067c4a656e2469e543159b2e3a1dfbe123aa987f44437698a1"
+      },
+      {
+        "path": "../raw/walk-14.png",
+        "sha256": "04c7c24cc796c67f1e9e51e5289842f8cb60bbfe94ee744c33df32d351c3ada8"
+      },
+      {
+        "path": "../raw/walk-15.png",
+        "sha256": "40f76ce6a86839e69845494c5a17b10631b8f17f6124b442baac90811cc1a909"
+      },
+      {
+        "path": "../raw/walk-16.png",
+        "sha256": "8bbdd4c68eadc6c40a1902464288d893a885deec65c595801ea8dfeba35f5b60"
+      },
+      {
+        "path": "../raw/walk-17.png",
+        "sha256": "35b6a3c95421115a017caa0cf659b2ae5f045bff32f38921689c7a3603498b96"
+      },
+      {
+        "path": "../raw/walk-18.png",
+        "sha256": "2ba369dfe8c5ab4cfbcc5f9f0fdbf363f940498669beb4479b207c0efdd3b06a"
+      },
+      {
+        "path": "../raw/walk-19.png",
+        "sha256": "64c2253be280006718f866f612b507fe85baffecddf50197beece296c3c8a1b9"
+      },
+      {
+        "path": "../raw/walk-20.png",
+        "sha256": "5100de08ac74580bd70ab79db143622e95b931047268980ba0f6967f46b8de11"
+      },
+      {
+        "path": "../raw/walk-21.png",
+        "sha256": "39315223774513d51aeba4011e16d770e1a6278458305d089ae93c4cae359076"
+      },
+      {
+        "path": "../raw/walk-22.png",
+        "sha256": "4acc7ed82d8d90b27caa05364274808906c6d2176d5d4c7c166a2144c167421e"
+      },
+      {
+        "path": "../raw/walk-23.png",
+        "sha256": "f34f35bbec20af2edc93ec242d12eb6b631b9b57f9924228372f3f3de3cf0e07"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "frames/walk-00.png",
+        "sha256": "ccbc99b44f2a9a3e0b10ff69cde52c05280b5718b8a894138317e5744eca0779",
+        "bytes": 40891
+      },
+      {
+        "path": "frames/walk-01.png",
+        "sha256": "9e14dff0031ae44993fc079ea36bacdc9ece70d229e2b216f7621f8a6ac1d4af",
+        "bytes": 41049
+      },
+      {
+        "path": "frames/walk-02.png",
+        "sha256": "e6e8f8b323b78e0d1ee8eb83ee9e4f35611b00458f2ea9dcf8ab7384b6cc60ab",
+        "bytes": 40720
+      },
+      {
+        "path": "frames/walk-03.png",
+        "sha256": "c65c5989d30bed8ca14a8016af8dd81fd2475670c631dc820626494afcf44daf",
+        "bytes": 40457
+      },
+      {
+        "path": "frames/walk-04.png",
+        "sha256": "fdb1b1954c5a1ad2e5929e8c4bca4e7c19269164f5fde575f0a5104958dbd033",
+        "bytes": 40355
+      },
+      {
+        "path": "frames/walk-05.png",
+        "sha256": "49d21feed460eb17927c50ffe9a6270152fadb8f68fd1941e88b0ac6018c8e96",
+        "bytes": 40495
+      },
+      {
+        "path": "frames/walk-06.png",
+        "sha256": "091e8484a745f9f894cb398ff8c6dd465058d9e343ded7e8ef634e6a57323379",
+        "bytes": 40563
+      },
+      {
+        "path": "frames/walk-07.png",
+        "sha256": "ae05a1321dc86a6c5a7870bdf0977c56c65ae7779130978bfd00b96042d1ef55",
+        "bytes": 40576
+      },
+      {
+        "path": "frames/walk-08.png",
+        "sha256": "889b66bcb9bc0664391bb3f65067fa3348476c4d8063be291949fdf788e7b837",
+        "bytes": 40432
+      },
+      {
+        "path": "frames/walk-09.png",
+        "sha256": "9701775eea6cafbe975838340dc8f0d2aa29d7c41deeb027309c995a772a3e5d",
+        "bytes": 40511
+      },
+      {
+        "path": "frames/walk-10.png",
+        "sha256": "3739df3ba13627abd481fbb7945d7e8f6bf81d9f202e61fb450c159c140891c9",
+        "bytes": 40736
+      },
+      {
+        "path": "frames/walk-11.png",
+        "sha256": "ec40275cbdd81f504e6b88be91581f24cc783387825d1e24c2fc9f99f44f4cd1",
+        "bytes": 41035
+      },
+      {
+        "path": "frames/walk-12.png",
+        "sha256": "6fe2b1b2d6b024f1fe03c6ee0c6bd8780d2f74966845d192a39087a2afe4bb5f",
+        "bytes": 40856
+      },
+      {
+        "path": "frames/walk-13.png",
+        "sha256": "a1476d60780e511b2662336262029627086ab481bfe49468daa0dfef292ab827",
+        "bytes": 41152
+      },
+      {
+        "path": "frames/walk-14.png",
+        "sha256": "f82bf014f8e85831e518894416b61a63ac13698daad473932ae3e5d26413926a",
+        "bytes": 41285
+      },
+      {
+        "path": "frames/walk-15.png",
+        "sha256": "af7feac8c93e42211aec26d6e522e687920da6a5271e3be1d0cabb5fd61a0b58",
+        "bytes": 41449
+      },
+      {
+        "path": "frames/walk-16.png",
+        "sha256": "d2818db7a941129ff82637d858d8f8e2f50d616bcb5e3f25f6373be3a28b2958",
+        "bytes": 41521
+      },
+      {
+        "path": "frames/walk-17.png",
+        "sha256": "975bf21305a590f640a2792591a8b2401a1efc210bce51f2384de6dba85f7f8b",
+        "bytes": 41647
+      },
+      {
+        "path": "frames/walk-18.png",
+        "sha256": "46feed01c0b9865de5a00b5030d6c5c0c46cd39b59ff792d139870f322a36c3a",
+        "bytes": 41642
+      },
+      {
+        "path": "frames/walk-19.png",
+        "sha256": "1c98e506995fea38840d5c834ff684417f6f5f0f075cf086a0d0ef53f0000753",
+        "bytes": 41696
+      },
+      {
+        "path": "frames/walk-20.png",
+        "sha256": "fc3476533a4ac782b79250c8a789773753d4a43f01e2c50a5d615bea3f51a7f9",
+        "bytes": 41514
+      },
+      {
+        "path": "frames/walk-21.png",
+        "sha256": "7753bd499010c94c22925052d3a982eb71c9e8b2d8fff5a50e79396ec2e83347",
+        "bytes": 41529
+      },
+      {
+        "path": "frames/walk-22.png",
+        "sha256": "e93da69f5544ec194a7893b29de32086429e330d19df9a51ee1be39b1ce9c065",
+        "bytes": 41304
+      },
+      {
+        "path": "frames/walk-23.png",
+        "sha256": "18726551e146a6d595d23e17cb669b1ba16cef3892b1e3a78c88f8c47ebf92ae",
+        "bytes": 41242
+      },
+      {
+        "path": "review-contact.png",
+        "sha256": "3c1d581ed5b821e45b306b24e8af237c2dd504d58910cd7287a3c055d4c12b08",
+        "bytes": 257875
+      }
+    ],
+    "tool": {
+      "name": "finish_frames",
+      "version": "0.4.0"
+    }
+  }
+}

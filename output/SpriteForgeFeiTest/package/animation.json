@@ -1,0 +1,573 @@
+{
+  "schemaVersion": "3.0",
+  "name": "fei-walk",
+  "sourceSize": [
+    189,
+    264
+  ],
+  "sourceAnchor": [
+    70.0,
+    262.0
+  ],
+  "inputFrameSize": [
+    189,
+    264
+  ],
+  "sourceRect": [
+    0.0,
+    0.0,
+    189.0,
+    264.0
+  ],
+  "sourceRectFormat": "x,y,width,height",
+  "encodedSize": [
+    190,
+    264
+  ],
+  "contentSize": [
+    189,
+    264
+  ],
+  "encodedAnchor": [
+    70.0,
+    262.0
+  ],
+  "registration": {
+    "mode": "preserved",
+    "legacyMode": "preserved-source-canvas"
+  },
+  "fps": 20.0,
+  "fpsRational": "20/1",
+  "frameCount": 24,
+  "durationSeconds": 1.2,
+  "loop": true,
+  "reviewStatus": "needs-visual-review",
+  "hitEvents": [],
+  "poster": {
+    "file": "fei-walk-poster.png",
+    "bytes": 40908,
+    "sha256": "26f6a6f65937e91f68249f21fd92b944623f96e441688336474eeb5479cece53"
+  },
+  "fallback": {
+    "type": "png-atlas",
+    "cellSize": [
+      190,
+      264
+    ],
+    "pages": [
+      {
+        "file": "fei-walk-atlas-00.png",
+        "bytes": 795219,
+        "sha256": "7febb361ad90ded306ba5bdb1acf62883c6d410059b70791fd5dfd02c7e9efca",
+        "firstFrame": 0,
+        "frameCount": 24,
+        "columns": 8
+      }
+    ]
+  },
+  "webm": {
+    "file": "fei-walk.webm",
+    "bytes": 52119,
+    "sha256": "c403874073c1dae3e33ce1f1f951ab75dff53db415e93720c6d323cc0cc3d238",
+    "mimeType": "video/webm",
+    "codec": "vp9",
+    "alpha": "native-vp9",
+    "pixFmt": "yuva420p",
+    "width": 190,
+    "height": 264,
+    "crf": 28,
+    "keyint": 24,
+    "keyframes": [
+      0
+    ],
+    "frameCount": 24,
+    "fps": "20/1",
+    "durationMs": 1200.0,
+    "requiresAlphaPlaybackVerification": true,
+    "fullDecodePassed": true
+  },
+  "packedAlpha": {
+    "file": "fei-walk-packed.mp4",
+    "bytes": 54864,
+    "sha256": "30f7d331fe781dee07a826e331c16959169aff18a39bc27e5355be38759e4ada",
+    "mimeType": "video/mp4",
+    "codec": "h264",
+    "profile": "main",
+    "layout": "rgb-left-alpha-right",
+    "width": 189,
+    "height": 264,
+    "halfWidth": 190,
+    "halfHeight": 264,
+    "encodedSize": [
+      380,
+      264
+    ],
+    "requiresCompositor": true,
+    "crf": 18,
+    "keyint": 24,
+    "keyframes": [
+      0
+    ],
+    "frameCount": 24,
+    "fps": "20/1",
+    "durationMs": 1200.0,
+    "closedGop": true,
+    "fullDecodePassed": true
+  },
+  "qa": {
+    "status": "needs-visual-review",
+    "method": "engine_export package: forge_matte.matte_qa key-residue gate on every packaged source frame (alpha <= 16 cleared, D18; key from flag, D17); body-bounds and premultiplied seam diagnostics; selection, registration and review bound by sha256; forge_av encoders verify packet counts and keyframes; every encoded file is decoded completely",
+    "notProven": [
+      "Visual identity, contact and gait quality: a low seam ratio or stable bounds do not prove a seamless cycle or a planted foot.",
+      "Playback of the encoded files: run engine_export.py verify to decode them and compare them with the atlas, then validate_animation.py.",
+      "Browser, Safari, WebGL or iPhone playback, decoder throughput and memory on target devices.",
+      "Key-residue thresholds were set on one clip (report v2); unusual keys or costumes need a look."
+    ],
+    "checks": [
+      {
+        "id": "opaque_key_px",
+        "status": "skipped",
+        "value": null,
+        "threshold": null
+      },
+      {
+        "id": "outer_ring_spill_fraction",
+        "status": "skipped",
+        "value": null,
+        "threshold": null
+      },
+      {
+        "id": "semitransparent_fraction",
+        "status": "skipped",
+        "value": null,
+        "threshold": null
+      },
+      {
+        "id": "enclosed_key_pockets",
+        "status": "skipped",
+        "value": null,
+        "threshold": null
+      },
+      {
+        "id": "blank_frames",
+        "status": "pass",
+        "value": [],
+        "threshold": []
+      },
+      {
+        "id": "edge_touch_frames",
+        "status": "pass",
+        "value": [],
+        "threshold": []
+      },
+      {
+        "id": "loop_seam_over_p95",
+        "value": 0.703696,
+        "threshold": 1.1,
+        "status": "pass"
+      },
+      {
+        "id": "selection_hashes",
+        "status": "skipped",
+        "value": null,
+        "threshold": null
+      },
+      {
+        "id": "registration",
+        "status": "skipped",
+        "value": null,
+        "threshold": null
+      },
+      {
+        "id": "fps_cap",
+        "status": "pass",
+        "value": "20/1",
+        "threshold": "60/1"
+      },
+      {
+        "id": "review_verdict",
+        "status": "needs-visual-review",
+        "value": null,
+        "threshold": "accepted"
+      },
+      {
+        "id": "full_decode_fei-walk.webm",
+        "status": "pass",
+        "value": 24,
+        "threshold": 24
+      },
+      {
+        "id": "full_decode_fei-walk-packed.mp4",
+        "status": "pass",
+        "value": 24,
+        "threshold": 24
+      }
+    ],
+    "inputs": [
+      {
+        "path": "walk-00.png",
+        "sha256": "ccbc99b44f2a9a3e0b10ff69cde52c05280b5718b8a894138317e5744eca0779",
+        "bytes": 40891
+      },
+      {
+        "path": "walk-01.png",
+        "sha256": "9e14dff0031ae44993fc079ea36bacdc9ece70d229e2b216f7621f8a6ac1d4af",
+        "bytes": 41049
+      },
+      {
+        "path": "walk-02.png",
+        "sha256": "e6e8f8b323b78e0d1ee8eb83ee9e4f35611b00458f2ea9dcf8ab7384b6cc60ab",
+        "bytes": 40720
+      },
+      {
+        "path": "walk-03.png",
+        "sha256": "c65c5989d30bed8ca14a8016af8dd81fd2475670c631dc820626494afcf44daf",
+        "bytes": 40457
+      },
+      {
+        "path": "walk-04.png",
+        "sha256": "fdb1b1954c5a1ad2e5929e8c4bca4e7c19269164f5fde575f0a5104958dbd033",
+        "bytes": 40355
+      },
+      {
+        "path": "walk-05.png",
+        "sha256": "49d21feed460eb17927c50ffe9a6270152fadb8f68fd1941e88b0ac6018c8e96",
+        "bytes": 40495
+      },
+      {
+        "path": "walk-06.png",
+        "sha256": "091e8484a745f9f894cb398ff8c6dd465058d9e343ded7e8ef634e6a57323379",
+        "bytes": 40563
+      },
+      {
+        "path": "walk-07.png",
+        "sha256": "ae05a1321dc86a6c5a7870bdf0977c56c65ae7779130978bfd00b96042d1ef55",
+        "bytes": 40576
+      },
+      {
+        "path": "walk-08.png",
+        "sha256": "889b66bcb9bc0664391bb3f65067fa3348476c4d8063be291949fdf788e7b837",
+        "bytes": 40432
+      },
+      {
+        "path": "walk-09.png",
+        "sha256": "9701775eea6cafbe975838340dc8f0d2aa29d7c41deeb027309c995a772a3e5d",
+        "bytes": 40511
+      },
+      {
+        "path": "walk-10.png",
+        "sha256": "3739df3ba13627abd481fbb7945d7e8f6bf81d9f202e61fb450c159c140891c9",
+        "bytes": 40736
+      },
+      {
+        "path": "walk-11.png",
+        "sha256": "ec40275cbdd81f504e6b88be91581f24cc783387825d1e24c2fc9f99f44f4cd1",
+        "bytes": 41035
+      },
+      {
+        "path": "walk-12.png",
+        "sha256": "6fe2b1b2d6b024f1fe03c6ee0c6bd8780d2f74966845d192a39087a2afe4bb5f",
+        "bytes": 40856
+      },
+      {
+        "path": "walk-13.png",
+        "sha256": "a1476d60780e511b2662336262029627086ab481bfe49468daa0dfef292ab827",
+        "bytes": 41152
+      },
+      {
+        "path": "walk-14.png",
+        "sha256": "f82bf014f8e85831e518894416b61a63ac13698daad473932ae3e5d26413926a",
+        "bytes": 41285
+      },
+      {
+        "path": "walk-15.png",
+        "sha256": "af7feac8c93e42211aec26d6e522e687920da6a5271e3be1d0cabb5fd61a0b58",
+        "bytes": 41449
+      },
+      {
+        "path": "walk-16.png",
+        "sha256": "d2818db7a941129ff82637d858d8f8e2f50d616bcb5e3f25f6373be3a28b2958",
+        "bytes": 41521
+      },
+      {
+        "path": "walk-17.png",
+        "sha256": "975bf21305a590f640a2792591a8b2401a1efc210bce51f2384de6dba85f7f8b",
+        "bytes": 41647
+      },
+      {
+        "path": "walk-18.png",
+        "sha256": "46feed01c0b9865de5a00b5030d6c5c0c46cd39b59ff792d139870f322a36c3a",
+        "bytes": 41642
+      },
+      {
+        "path": "walk-19.png",
+        "sha256": "1c98e506995fea38840d5c834ff684417f6f5f0f075cf086a0d0ef53f0000753",
+        "bytes": 41696
+      },
+      {
+        "path": "walk-20.png",
+        "sha256": "fc3476533a4ac782b79250c8a789773753d4a43f01e2c50a5d615bea3f51a7f9",
+        "bytes": 41514
+      },
+      {
+        "path": "walk-21.png",
+        "sha256": "7753bd499010c94c22925052d3a982eb71c9e8b2d8fff5a50e79396ec2e83347",
+        "bytes": 41529
+      },
+      {
+        "path": "walk-22.png",
+        "sha256": "e93da69f5544ec194a7893b29de32086429e330d19df9a51ee1be39b1ce9c065",
+        "bytes": 41304
+      },
+      {
+        "path": "walk-23.png",
+        "sha256": "18726551e146a6d595d23e17cb669b1ba16cef3892b1e3a78c88f8c47ebf92ae",
+        "bytes": 41242
+      }
+    ],
+    "outputs": [
+      {
+        "path": "fei-walk-poster.png",
+        "sha256": "26f6a6f65937e91f68249f21fd92b944623f96e441688336474eeb5479cece53",
+        "bytes": 40908
+      },
+      {
+        "path": "fei-walk-atlas-00.png",
+        "sha256": "7febb361ad90ded306ba5bdb1acf62883c6d410059b70791fd5dfd02c7e9efca",
+        "bytes": 795219
+      },
+      {
+        "path": "fei-walk.webm",
+        "sha256": "c403874073c1dae3e33ce1f1f951ab75dff53db415e93720c6d323cc0cc3d238",
+        "bytes": 52119
+      },
+      {
+        "path": "fei-walk-packed.mp4",
+        "sha256": "30f7d331fe781dee07a826e331c16959169aff18a39bc27e5355be38759e4ada",
+        "bytes": 54864
+      }
+    ],
+    "tool": {
+      "name": "engine_export.py",
+      "version": "0.4.0"
+    },
+    "loopRequested": true,
+    "frameCount": 24,
+    "durationSeconds": 1.2,
+    "blankFrames": [],
+    "edgeTouchFrames": [],
+    "boundsBottomSpanPx": 5,
+    "boundsCenterXSpanPx": 1.0,
+    "seamPremultipliedMAE": 0.009364,
+    "adjacentMedianMAE": 0.011327,
+    "seamToMedianRatio": 0.827,
+    "adjacentMaxMAE": 0.013212,
+    "notes": [
+      "Bounds bottom is a contact-drift proxy, not a tracked foot/root.",
+      "A similar first/last frame does not prove a seamless cycle or stable identity.",
+      "Airborne poses may legitimately change bottom position; review at runtime scale."
+    ],
+    "allowKeyResidue": false,
+    "keySource": "flag",
+    "seamReport": {
+      "frames": 24,
+      "seam": 2.570705,
+      "adjacent_median": 3.179674,
+      "adjacent_p95": 3.653145,
+      "adjacent_max": 3.727708,
+      "seam_over_median": 0.808481,
+      "seam_over_p95": 0.703696,
+      "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first"
+    }
+  },
+  "inputFrames": [
+    {
+      "file": "walk-00.png",
+      "bytes": 40891,
+      "sha256": "ccbc99b44f2a9a3e0b10ff69cde52c05280b5718b8a894138317e5744eca0779"
+    },
+    {
+      "file": "walk-01.png",
+      "bytes": 41049,
+      "sha256": "9e14dff0031ae44993fc079ea36bacdc9ece70d229e2b216f7621f8a6ac1d4af"
+    },
+    {
+      "file": "walk-02.png",
+      "bytes": 40720,
+      "sha256": "e6e8f8b323b78e0d1ee8eb83ee9e4f35611b00458f2ea9dcf8ab7384b6cc60ab"
+    },
+    {
+      "file": "walk-03.png",
+      "bytes": 40457,
+      "sha256": "c65c5989d30bed8ca14a8016af8dd81fd2475670c631dc820626494afcf44daf"
+    },
+    {
+      "file": "walk-04.png",
+      "bytes": 40355,
+      "sha256": "fdb1b1954c5a1ad2e5929e8c4bca4e7c19269164f5fde575f0a5104958dbd033"
+    },
+    {
+      "file": "walk-05.png",
+      "bytes": 40495,
+      "sha256": "49d21feed460eb17927c50ffe9a6270152fadb8f68fd1941e88b0ac6018c8e96"
+    },
+    {
+      "file": "walk-06.png",
+      "bytes": 40563,
+      "sha256": "091e8484a745f9f894cb398ff8c6dd465058d9e343ded7e8ef634e6a57323379"
+    },
+    {
+      "file": "walk-07.png",
+      "bytes": 40576,
+      "sha256": "ae05a1321dc86a6c5a7870bdf0977c56c65ae7779130978bfd00b96042d1ef55"
+    },
+    {
+      "file": "walk-08.png",
+      "bytes": 40432,
+      "sha256": "889b66bcb9bc0664391bb3f65067fa3348476c4d8063be291949fdf788e7b837"
+    },
+    {
+      "file": "walk-09.png",
+      "bytes": 40511,
+      "sha256": "9701775eea6cafbe975838340dc8f0d2aa29d7c41deeb027309c995a772a3e5d"
+    },
+    {
+      "file": "walk-10.png",
+      "bytes": 40736,
+      "sha256": "3739df3ba13627abd481fbb7945d7e8f6bf81d9f202e61fb450c159c140891c9"
+    },
+    {
+      "file": "walk-11.png",
+      "bytes": 41035,
+      "sha256": "ec40275cbdd81f504e6b88be91581f24cc783387825d1e24c2fc9f99f44f4cd1"
+    },
+    {
+      "file": "walk-12.png",
+      "bytes": 40856,
+      "sha256": "6fe2b1b2d6b024f1fe03c6ee0c6bd8780d2f74966845d192a39087a2afe4bb5f"
+    },
+    {
+      "file": "walk-13.png",
+      "bytes": 41152,
+      "sha256": "a1476d60780e511b2662336262029627086ab481bfe49468daa0dfef292ab827"
+    },
+    {
+      "file": "walk-14.png",
+      "bytes": 41285,
+      "sha256": "f82bf014f8e85831e518894416b61a63ac13698daad473932ae3e5d26413926a"
+    },
+    {
+      "file": "walk-15.png",
+      "bytes": 41449,
+      "sha256": "af7feac8c93e42211aec26d6e522e687920da6a5271e3be1d0cabb5fd61a0b58"
+    },
+    {
+      "file": "walk-16.png",
+      "bytes": 41521,
+      "sha256": "d2818db7a941129ff82637d858d8f8e2f50d616bcb5e3f25f6373be3a28b2958"
+    },
+    {
+      "file": "walk-17.png",
+      "bytes": 41647,
+      "sha256": "975bf21305a590f640a2792591a8b2401a1efc210bce51f2384de6dba85f7f8b"
+    },
+    {
+      "file": "walk-18.png",
+      "bytes": 41642,
+      "sha256": "46feed01c0b9865de5a00b5030d6c5c0c46cd39b59ff792d139870f322a36c3a"
+    },
+    {
+      "file": "walk-19.png",
+      "bytes": 41696,
+      "sha256": "1c98e506995fea38840d5c834ff684417f6f5f0f075cf086a0d0ef53f0000753"
+    },
+    {
+      "file": "walk-20.png",
+      "bytes": 41514,
+      "sha256": "fc3476533a4ac782b79250c8a789773753d4a43f01e2c50a5d615bea3f51a7f9"
+    },
+    {
+      "file": "walk-21.png",
+      "bytes": 41529,
+      "sha256": "7753bd499010c94c22925052d3a982eb71c9e8b2d8fff5a50e79396ec2e83347"
+    },
+    {
+      "file": "walk-22.png",
+      "bytes": 41304,
+      "sha256": "e93da69f5544ec194a7893b29de32086429e330d19df9a51ee1be39b1ce9c065"
+    },
+    {
+      "file": "walk-23.png",
+      "bytes": 41242,
+      "sha256": "18726551e146a6d595d23e17cb669b1ba16cef3892b1e3a78c88f8c47ebf92ae"
+    }
+  ],
+  "runtimeNotes": [
+    "Game logic owns hit timings, damage and root motion.",
+    "Packed MP4 has no native alpha; reconstruct RGB and alpha before displaying.",
+    "Keep sourceSize/sourceAnchor for world geometry when selecting smaller media.",
+    "Use the PNG poster until a decoded first frame exists; preload only current scene actions.",
+    "Packed halves are padded to even sizes: crop RGB at (0, 0, width, height) and alpha (red) at (halfWidth, 0, width, height).",
+    "durationsMs is the timeline; fps/fpsRational is the constant rate of the video transports."
+  ],
+  "sourceIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "durationsMs": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+  ],
+  "loopPolicy": "cycle",
+  "events": [],
+  "cadenceMs": 1200.0,
+  "sampling": "linear",
+  "pixelArt": false,
+  "provenanceFile": "provenance.json",
+  "artSource": "existing",
+  "placeholder": false
+}

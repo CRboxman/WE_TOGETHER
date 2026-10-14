@@ -1,0 +1,193 @@
+{
+  "schema": "video2dsprite.provenance.v1",
+  "tool": "engine_export.py",
+  "version": "0.4.0",
+  "params": {
+    "name": "fei-walk",
+    "formats": [
+      "packed",
+      "png",
+      "webm"
+    ],
+    "maxSide": 384,
+    "cropUnion": false,
+    "fps": "20/1",
+    "loopPolicy": "cycle",
+    "tiers": [],
+    "resampler": "lanczos",
+    "pixelArt": false,
+    "key": null,
+    "keySource": "flag",
+    "allowKeyResidue": false,
+    "crfWebm": 28,
+    "crfPacked": 18,
+    "sourceSize": [
+      189,
+      264
+    ],
+    "sourceAnchor": [
+      70.0,
+      262.0
+    ],
+    "actionPadding": null,
+    "tickExpansion": null,
+    "engineExport": "3.0.0"
+  },
+  "inputs": [
+    {
+      "path": "walk-00.png",
+      "sha256": "ccbc99b44f2a9a3e0b10ff69cde52c05280b5718b8a894138317e5744eca0779",
+      "bytes": 40891,
+      "role": "frame"
+    },
+    {
+      "path": "walk-01.png",
+      "sha256": "9e14dff0031ae44993fc079ea36bacdc9ece70d229e2b216f7621f8a6ac1d4af",
+      "bytes": 41049,
+      "role": "frame"
+    },
+    {
+      "path": "walk-02.png",
+      "sha256": "e6e8f8b323b78e0d1ee8eb83ee9e4f35611b00458f2ea9dcf8ab7384b6cc60ab",
+      "bytes": 40720,
+      "role": "frame"
+    },
+    {
+      "path": "walk-03.png",
+      "sha256": "c65c5989d30bed8ca14a8016af8dd81fd2475670c631dc820626494afcf44daf",
+      "bytes": 40457,
+      "role": "frame"
+    },
+    {
+      "path": "walk-04.png",
+      "sha256": "fdb1b1954c5a1ad2e5929e8c4bca4e7c19269164f5fde575f0a5104958dbd033",
+      "bytes": 40355,
+      "role": "frame"
+    },
+    {
+      "path": "walk-05.png",
+      "sha256": "49d21feed460eb17927c50ffe9a6270152fadb8f68fd1941e88b0ac6018c8e96",
+      "bytes": 40495,
+      "role": "frame"
+    },
+    {
+      "path": "walk-06.png",
+      "sha256": "091e8484a745f9f894cb398ff8c6dd465058d9e343ded7e8ef634e6a57323379",
+      "bytes": 40563,
+      "role": "frame"
+    },
+    {
+      "path": "walk-07.png",
+      "sha256": "ae05a1321dc86a6c5a7870bdf0977c56c65ae7779130978bfd00b96042d1ef55",
+      "bytes": 40576,
+      "role": "frame"
+    },
+    {
+      "path": "walk-08.png",
+      "sha256": "889b66bcb9bc0664391bb3f65067fa3348476c4d8063be291949fdf788e7b837",
+      "bytes": 40432,
+      "role": "frame"
+    },
+    {
+      "path": "walk-09.png",
+      "sha256": "9701775eea6cafbe975838340dc8f0d2aa29d7c41deeb027309c995a772a3e5d",
+      "bytes": 40511,
+      "role": "frame"
+    },
+    {
+      "path": "walk-10.png",
+      "sha256": "3739df3ba13627abd481fbb7945d7e8f6bf81d9f202e61fb450c159c140891c9",
+      "bytes": 40736,
+      "role": "frame"
+    },
+    {
+      "path": "walk-11.png",
+      "sha256": "ec40275cbdd81f504e6b88be91581f24cc783387825d1e24c2fc9f99f44f4cd1",
+      "bytes": 41035,
+      "role": "frame"
+    },
+    {
+      "path": "walk-12.png",
+      "sha256": "6fe2b1b2d6b024f1fe03c6ee0c6bd8780d2f74966845d192a39087a2afe4bb5f",
+      "bytes": 40856,
+      "role": "frame"
+    },
+    {
+      "path": "walk-13.png",
+      "sha256": "a1476d60780e511b2662336262029627086ab481bfe49468daa0dfef292ab827",
+      "bytes": 41152,
+      "role": "frame"
+    },
+    {
+      "path": "walk-14.png",
+      "sha256": "f82bf014f8e85831e518894416b61a63ac13698daad473932ae3e5d26413926a",
+      "bytes": 41285,
+      "role": "frame"
+    },
+    {
+      "path": "walk-15.png",
+      "sha256": "af7feac8c93e42211aec26d6e522e687920da6a5271e3be1d0cabb5fd61a0b58",
+      "bytes": 41449,
+      "role": "frame"
+    },
+    {
+      "path": "walk-16.png",
+      "sha256": "d2818db7a941129ff82637d858d8f8e2f50d616bcb5e3f25f6373be3a28b2958",
+      "bytes": 41521,
+      "role": "frame"
+    },
+    {
+      "path": "walk-17.png",
+      "sha256": "975bf21305a590f640a2792591a8b2401a1efc210bce51f2384de6dba85f7f8b",
+      "bytes": 41647,
+      "role": "frame"
+    },
+    {
+      "path": "walk-18.png",
+      "sha256": "46feed01c0b9865de5a00b5030d6c5c0c46cd39b59ff792d139870f322a36c3a",
+      "bytes": 41642,
+      "role": "frame"
+    },
+    {
+      "path": "walk-19.png",
+      "sha256": "1c98e506995fea38840d5c834ff684417f6f5f0f075cf086a0d0ef53f0000753",
+      "bytes": 41696,
+      "role": "frame"
+    },
+    {
+      "path": "walk-20.png",
+      "sha256": "fc3476533a4ac782b79250c8a789773753d4a43f01e2c50a5d615bea3f51a7f9",
+      "bytes": 41514,
+      "role": "frame"
+    },
+    {
+      "path": "walk-21.png",
+      "sha256": "7753bd499010c94c22925052d3a982eb71c9e8b2d8fff5a50e79396ec2e83347",
+      "bytes": 41529,
+      "role": "frame"
+    },
+    {
+      "path": "walk-22.png",
+      "sha256": "e93da69f5544ec194a7893b29de32086429e330d19df9a51ee1be39b1ce9c065",
+      "bytes": 41304,
+      "role": "frame"
+    },
+    {
+      "path": "walk-23.png",
+      "sha256": "18726551e146a6d595d23e17cb669b1ba16cef3892b1e3a78c88f8c47ebf92ae",
+      "bytes": 41242,
+      "role": "frame"
+    }
+  ],
+  "inputDigest": "ff14e0703bfb4931677e7b209719ab2bbe67068eb373431bfb282c5cfc27d96f",
+  "libraries": {
+    "forge_core": "1.1",
+    "forge_matte": "1.1",
+    "forge_av": "1"
+  },
+  "inputDirectory": "../finished/frames",
+  "renderer": {
+    "name": "ffmpeg",
+    "version": "8.0.1-essentials_build-www.gyan.dev"
+  }
+}

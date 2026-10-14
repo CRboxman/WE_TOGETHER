@@ -1,0 +1,74 @@
+{
+  "schema": "generate2dsprite.animation_clips.v2",
+  "frames": [
+    "finished/frames/walk-00.png",
+    "finished/frames/walk-01.png",
+    "finished/frames/walk-02.png",
+    "finished/frames/walk-03.png",
+    "finished/frames/walk-04.png",
+    "finished/frames/walk-05.png",
+    "finished/frames/walk-06.png",
+    "finished/frames/walk-07.png",
+    "finished/frames/walk-08.png",
+    "finished/frames/walk-09.png",
+    "finished/frames/walk-10.png",
+    "finished/frames/walk-11.png",
+    "finished/frames/walk-12.png",
+    "finished/frames/walk-13.png",
+    "finished/frames/walk-14.png",
+    "finished/frames/walk-15.png",
+    "finished/frames/walk-16.png",
+    "finished/frames/walk-17.png",
+    "finished/frames/walk-18.png",
+    "finished/frames/walk-19.png",
+    "finished/frames/walk-20.png",
+    "finished/frames/walk-21.png",
+    "finished/frames/walk-22.png",
+    "finished/frames/walk-23.png"
+  ],
+  "anchor_px": [
+    70,
+    262
+  ],
+  "clips": {
+    "walk": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "ticks": 3,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player"
+    }
+  },
+  "states": {
+    "moving": "walk"
+  },
+  "sampling": "linear",
+  "pixel_art": false,
+  "art_source": "existing",
+  "placeholder": false
+}
