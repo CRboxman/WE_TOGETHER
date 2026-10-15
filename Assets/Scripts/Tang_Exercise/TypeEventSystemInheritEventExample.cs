@@ -29,7 +29,7 @@ public class TypeEventSystemInheritEventExample : MonoBehaviour
             {
                 TypeEventSystem.Global.Send<IEventA>(new EventB());
 
-                // 无效写法
+                // 无效写法aaa
                 //TypeEventSystem.Global.Send<EventB>();
             }
         }

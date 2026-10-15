@@ -170,7 +170,15 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4294967040
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: -81.5, y: 141.5}
+      - {x: -81.5, y: -17.5}
+      - {x: -47.5, y: -92.5}
+      - {x: 34.5, y: -141.5}
+      - {x: 81.5, y: -141.5}
+      - {x: 81.5, y: -5.5}
+      - {x: 45.5, y: 141.5}
     vertices:
     - position: {x: 98.75102, y: 280.4582}
       boneWeight:
