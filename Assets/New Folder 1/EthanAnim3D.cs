@@ -6,7 +6,7 @@ using UnityEngine;
 public class EthanAnim3D : MonoBehaviour
 {
     private Animator anim;
-
+    [SerializeField]Transform lookAtTarget;
     [SerializeField]private float roundSpeed = 30;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class EthanAnim3D : MonoBehaviour
         }
         //AD，水平，对应左转右转
         transform.Rotate(Vector3.up,Input.GetAxisRaw(("Horizontal")) * roundSpeed * Time.deltaTime);
-        Debug.Log("这是update");
+
     }
 
     // private void OnAnimatorMove()
@@ -33,8 +33,9 @@ public class EthanAnim3D : MonoBehaviour
     //     Debug.Log("这是OnAnimatorMove");
     // }
 
-    private void JumpOver()
+    private void OnAnimatorIK(int layerIndex)
     {
-        anim.SetBool("DoJump",false);
+        anim.SetLookAtWeight(1,1,1);
+        anim.SetLookAtPosition(lookAtTarget.position);
     }
 }
