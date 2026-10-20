@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +25,13 @@ public class EthanAnim3D : MonoBehaviour
         }
         //AD，水平，对应左转右转
         transform.Rotate(Vector3.up,Input.GetAxisRaw(("Horizontal")) * roundSpeed * Time.deltaTime);
+        Debug.Log("这是update");
     }
+
+    // private void OnAnimatorMove()
+    // {
+    //     Debug.Log("这是OnAnimatorMove");
+    // }
 
     private void JumpOver()
     {
