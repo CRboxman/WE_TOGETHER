@@ -44,7 +44,7 @@ public class EthanAnim3D : MonoBehaviour
             var posy = Input.GetAxis("Mouse Y");
             getMouseXY.x += posx*10;
             getMouseXY.y += posy*10;
-            Debug.Log(posx);
+
             getMouseXY.x = Mathf.Clamp(getMouseXY.x,-45,45);
             getMouseXY.y = Mathf.Clamp(getMouseXY.y,-45,45);
             Quaternion q=Quaternion.AngleAxis(getMouseXY.x,Vector3.up)*Quaternion.AngleAxis(getMouseXY.y,Vector3.left);
@@ -55,6 +55,11 @@ public class EthanAnim3D : MonoBehaviour
                 getMouseXY = Vector3.zero;
                 getMouseXY1 = Head.position + Head.forward * 10;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("DoJump");
         }
     }
 
