@@ -3,7 +3,7 @@ name: funplay-unity-mcp-workflow
 description: Efficient workflow for using Unity MCP to edit, import, compile, inspect, and test Unity projects, including screenshot and Game View recording verification.
 ---
 <!-- Funplay Unity MCP managed project skills -->
-<!-- Funplay Unity MCP skill version: unity-mcp-workflow@1.0.6 -->
+<!-- Funplay Unity MCP skill version: unity-mcp-workflow@1.0.7 -->
 
 # Unity MCP Workflow
 
@@ -14,12 +14,15 @@ Use this skill when Codex or another AI agent is working in a Unity project and 
 - Do not use computer use (desktop mouse/keyboard automation) to operate Unity unless necessary. When assembling, modifying, inspecting or validating UI, prefer Unity MCP whenever it can complete the step, including hierarchy/component/prefab reads and edits, compilation/Play state, clicks/scrolling, screenshots and recordings.
 - Check the connected project's tools/list and, when available, `get_tool_capabilities`. A tool missing from exposure, compilation/domain reload or a temporary disconnection is not evidence of a missing capability: check exposure/readiness and recover status first. Respect custom allowlists; do not widen exposure or use another interaction method to bypass restrictions.
 - Prefer specialized MCP tools; for project-specific gaps they do not cover, use a permitted, guarded `execute_code` call through Unity Editor APIs when it can perform the step reliably. Computer use is a fallback only for a confirmed MCP capability gap, or an explicit user request: explain the uncovered step before using it, limit it to that step, and return to MCP readback/validation when available. If recovery fails, report the connection blocker rather than silently switching methods or repeating uncertain mutations.
+- A confirmed blocking native Unity modal that MCP cannot dismiss is a narrow computer-use exception. Explain the modal and handle only that blocker, then return to MCP and recheck project identity, Editor state and the interrupted operation. Do not infer permission to save, discard, overwrite, install, authorize or accept security changes merely to unblock Unity; ask when the consequential choice is not already authorized. Never replay an uncertain mutation.
 - This routing applies to operating Unity, not ordinary source-file editing or viewing supplied design references and already-captured images/videos with appropriate file or media tools.
 
 
 ## Version And Package Compatibility
 
 For package setup, unresolved types or version-dependent APIs, read [Project compatibility and package readiness](references/unity-mcp-workflow/project-compatibility.md). Distinguish requested, resolved and actually loaded packages before using their APIs. Keep the current MCP session and the project's Unity version; this skill does not require Unity 6 or the Unity CLI.
+
+For identity guards, strict input, PlayerLoop stalls, owned verification cleanup, serialized-reference protection and hash-validated continuation, read [Execution trust and faithful verification](references/unity-mcp-workflow/execution-trust.md). Keep compile, resource, input, render and application acceptance separate.
 
 
 ## Operating Loop
@@ -281,6 +284,6 @@ Use `capture_game_view` for static layout or a single visual state. Use `record_
 ## Metadata
 
 - Original skill id: `unity-mcp-workflow`
-- Skill version: `1.0.6`
+- Skill version: `1.0.7`
 - Platform: `codex`
 - Source repository: `https://github.com/FunplayAI/funplay-unity-mcp`

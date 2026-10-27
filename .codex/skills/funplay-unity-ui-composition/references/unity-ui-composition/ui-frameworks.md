@@ -1,5 +1,5 @@
 <!-- Funplay Unity MCP managed project skills -->
-<!-- Funplay Unity MCP skill version: unity-ui-composition@1.0.8 -->
+<!-- Funplay Unity MCP skill version: unity-ui-composition@1.0.9 -->
 
 # Choose The Existing UI Framework
 
